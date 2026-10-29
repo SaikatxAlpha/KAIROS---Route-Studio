@@ -1,0 +1,84 @@
+/* KAIROS design tokens — light, editorial, restrained. */
+:root {
+  color-scheme: light;
+
+  /* surfaces */
+  --canvas: #f7f7f4;
+  --surface: #ffffff;
+  --surface-2: #fbfbf9;
+  --surface-sunken: #f1f1ed;
+
+  /* ink */
+  --ink: #0b1324;
+  --ink-2: #3a4458;
+  --ink-3: #6b7385;
+  --ink-4: #9aa1af;
+
+  /* lines */
+  --line: #e6e7e3;
+  --line-2: #d6d8d3;
+  --line-strong: #b9bdb6;
+
+  /* accent: cobalt */
+  --accent: #1f47d6;
+  --accent-ink: #1a3bb2;
+  --accent-soft: #e9eefc;
+  --accent-tint: #f4f6fe;
+
+  /* baseline series: slate */
+  --base: #6b7385;
+  --base-soft: #eceef1;
+
+  /* status (reserved: always paired with icon/label) */
+  --ok: #13804c;
+  --ok-soft: #e5f3ec;
+  --warn: #a8670a;
+  --warn-soft: #fbf0dc;
+  --bad: #c0362b;
+  --bad-soft: #fbe9e7;
+
+  /* categorical (vehicles, <= 8) — validated reference order */
+  --cat-1: #2a78d6;
+  --cat-2: #eb6834;
+  --cat-3: #1baf7a;
+  --cat-4: #eda100;
+  --cat-5: #e87ba4;
+  --cat-6: #008300;
+  --cat-7: #4a3aa7;
+  --cat-8: #e34948;
+
+  /* type */
+  --font-sans: "Inter Tight Variable", "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --fs-xs: 11px;
+  --fs-sm: 12.5px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 20px;
+  --fs-2xl: 28px;
+  --fs-3xl: 40px;
+
+  /* space (4px grid) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+
+  /* radii */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+
+  /* elevation: hairline + soft */
+  --shadow-1: 0 1px 0 rgba(11, 19, 36, 0.03), 0 1px 2px rgba(11, 19, 36, 0.04);
+  --shadow-2: 0 1px 2px rgba(11, 19, 36, 0.05), 0 8px 24px -12px rgba(11, 19, 36, 0.14);
+  --shadow-pop: 0 12px 32px -12px rgba(11, 19, 36, 0.25), 0 2px 6px rgba(11, 19, 36, 0.06);
+
+  --focus: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

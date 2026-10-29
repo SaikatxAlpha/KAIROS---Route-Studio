@@ -1,0 +1,24 @@
+<section id="limits" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+<div style="display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">Limitations</p>
+<h2 style="font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1.1">What the evidence does not show</h2>
+<ul style="font-size:28px;color:#3A4458;line-height:1.5">
+<li>Gains are measured under a synthetic variability model, not real operations</li>
+<li>On-time rate is an expected share, not a route-level guarantee</li>
+<li>Amazon test dates cover two cities; map lines are straight segments</li>
+<li>Disruption sizes are illustrative and known once they occur</li>
+<li>DN-OR-01 statement unpublished at build time</li>
+</ul>
+</div>
+<div style="display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#13804C;font-weight:600;letter-spacing:3px;text-transform:uppercase">Next steps and impact</p>
+<h2 style="font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1.1">From benchmark to depot</h2>
+<ul style="font-size:28px;color:#3A4458;line-height:1.5">
+<li>Calibrate the scenario model on telematics arrival logs; the conformal pipeline carries over</li>
+<li>Learn service-time distributions per stop type</li>
+<li>Price the cost of reliability for a depot manager: minutes late saved per extra driving hour</li>
+<li>Add learned driver preferences once the core is validated</li>
+</ul>
+</div>
+<aside>Be explicit about what we cannot claim. The method is ready for real data: the same planner, simulator and conformal calibration would run on per-stop timestamps. The decision support value is making the reliability and cost trade-off visible and controllable.</aside>
+</section>

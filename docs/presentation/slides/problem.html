@@ -1,0 +1,23 @@
+<section id="problem" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">The problem</p>
+<h2 style="font-size:72px;font-weight:700;letter-spacing:-2px;line-height:1.1;width:1500px">An optimal route on paper is fragile in execution</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:20px;padding:48px">
+<p style="font-size:120px;font-weight:700;font-family:'JetBrains Mono', monospace;letter-spacing:-4px;line-height:1">100%</p>
+<p style="font-size:32px;color:#3A4458">of delivery windows met by a deterministic plan on its own assumptions</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:20px;padding:48px">
+<p style="font-size:120px;font-weight:700;font-family:'JetBrains Mono', monospace;letter-spacing:-4px;line-height:1;color:#C0362B">91.8%</p>
+<p style="font-size:32px;color:#3A4458">met once travel and service times vary (56 Solomon instances, simulated)</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:20px;padding:48px">
+<p style="font-size:120px;font-weight:700;font-family:'JetBrains Mono', monospace;letter-spacing:-4px;line-height:1;color:#C0362B">39%</p>
+<p style="font-size:32px;color:#3A4458">of instances reach a 95% on-time level out-of-sample</p>
+</div>
+</div>
+<p style="font-size:32px;color:#3A4458;width:1500px">Traffic, long doorstep stops, a broken van or an urgent order turn a tight plan into late deliveries. Conventional planners optimise fixed inputs and never see the risk.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1200px;font-size:24px;color:#6B7385">Measured: deterministic PyVRP plans, 500 synthetic scenarios per instance, medium variability</p>
+<aside>Start with the gap. The deterministic baseline meets every window on its own expected times. Under our documented variability model it falls to 91.8% of stops on time on average, and only 39% of the 56 instances reach 95%. The variability is synthetic (no public dataset records realised trip times), which we say on every screen.</aside>
+</section>

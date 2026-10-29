@@ -1,0 +1,69 @@
+{
+  "routes_in_route_data": 6112,
+  "routes_processed": 6112,
+  "routes_rejected": {},
+  "split_routes": {
+    "train": 4881,
+    "calibration": 872,
+    "test": 359
+  },
+  "split_dates": {
+    "train": [
+      "2018-07-19",
+      "2018-08-14",
+      27
+    ],
+    "calibration": [
+      "2018-08-15",
+      "2018-08-20",
+      6
+    ],
+    "test": [
+      "2018-08-21",
+      "2018-08-26",
+      6
+    ]
+  },
+  "stations": {
+    "DAU1": 0,
+    "DBO1": 1,
+    "DBO2": 2,
+    "DBO3": 3,
+    "DCH1": 4,
+    "DCH2": 5,
+    "DCH3": 6,
+    "DCH4": 7,
+    "DLA3": 8,
+    "DLA4": 9,
+    "DLA5": 10,
+    "DLA7": 11,
+    "DLA8": 12,
+    "DLA9": 13,
+    "DSE2": 14,
+    "DSE4": 15,
+    "DSE5": 16
+  },
+  "stops_total": 898415,
+  "packages_total": 1457175,
+  "stops_with_package_window": 59172,
+  "null_zone_ids": 6515,
+  "packages_invalid_service_time": 0,
+  "conflicting_windows_dropped": 0,
+  "arcs_sampled": {
+    "train": 1952272,
+    "calibration": 348779,
+    "test": 143585
+  },
+  "arcs_per_route": 400,
+  "seed": 2026,
+  "route_score_counts": {
+    "High": 2718,
+    "Medium": 3292,
+    "Low": 102
+  },
+  "stops_per_route": {
+    "min": 32,
+    "median": 150.0,
+    "max": 237
+  }
+}

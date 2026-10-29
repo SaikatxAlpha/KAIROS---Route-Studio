@@ -1,0 +1,29 @@
+<section id="replan" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">Dynamic replanning</p>
+<h2 style="font-size:72px;font-weight:700;letter-spacing:-2px;line-height:1.1">When something happens, the problem is rebuilt and re-solved</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+<div style="display:flex;flex-direction:column;gap:20px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:16px;padding:40px">
+<h3 style="font-size:36px;font-weight:700">Five synthetic events</h3>
+<ul style="font-size:28px;color:#3A4458;line-height:1.5">
+<li>Traffic delay in an area</li>
+<li>Vehicle breakdown</li>
+<li>Urgent order with a tight window</li>
+<li>Service-time shock in an area</li>
+<li>Adverse weather everywhere</li>
+</ul>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:16px;padding:40px">
+<h3 style="font-size:36px;font-weight:700">What the engine does</h3>
+<ul style="font-size:28px;color:#3A4458;line-height:1.5">
+<li>Observes each van’s realised progress at the event</li>
+<li>Builds a residual VRP: pseudo-depots at committed stops</li>
+<li>Compares hold-and-insert, re-optimise, KAIROS replan</li>
+<li>Diffs the plans and scores them on the same scenarios</li>
+</ul>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#6B7385">Real algorithms on synthetic events: every replan is a PyVRP solve, not an animation</p>
+<aside>Each active vehicle becomes its own vehicle type in PyVRP, starting where it will be free and when. Idle vans can be dispatched at a cost. A broken van’s stops become orphans to reassign; an urgent order on an Amazon instance gets its travel times from the calibrated model. The UI shows which stops moved between vehicles and why.</aside>
+</section>

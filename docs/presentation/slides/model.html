@@ -1,0 +1,38 @@
+<section id="model" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+<div style="display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">Prediction with calibrated uncertainty</p>
+<h2 style="font-size:64px;font-weight:700;letter-spacing:-2px;line-height:1.1">Travel-time estimates whose intervals hold on future dates</h2>
+<p style="font-size:30px;color:#3A4458;line-height:1.45">LightGBM quantile regression on 1.2 M real arcs; conformalized quantile regression on a later block of dates; evaluated on the last six dates (143,585 arcs).</p>
+<table style="font-size:28px;color:#0B1324">
+<tr><th style="width:48%">Test dates</th><th style="width:26%;text-align:right">Model</th><th style="width:26%;text-align:right">Speed fit</th></tr>
+<tr><td>Mean absolute error</td><td style="text-align:right">54.3 s</td><td style="text-align:right">61.9 s</td></tr>
+<tr><td>90% interval coverage</td><td style="text-align:right">90.2%</td><td style="text-align:right">89.2%</td></tr>
+<tr><td>90% interval width</td><td style="text-align:right">×2.09</td><td style="text-align:right">×2.46</td></tr>
+</table>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px;justify-content:center">
+<div style="position:relative;width:760px;height:620px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:20px">
+<svg aria-label="Coverage chart: conformal intervals lie on the diagonal at 50, 80, 90 and 95 percent nominal coverage" width="760" height="620" viewBox="0 0 760 620" style="position:absolute;left:0px;top:0px;width:760px;height:620px">
+<line x1="100" y1="540" x2="700" y2="540" stroke="#D6D8D3" stroke-width="2"/>
+<line x1="100" y1="540" x2="100" y2="60" stroke="#D6D8D3" stroke-width="2"/>
+<line x1="100" y1="540" x2="700" y2="60" stroke="#0B1324" stroke-width="2" stroke-dasharray="8 8"/>
+<polyline points="154.5,513.2 481.8,247.9 590.9,154.5 645.5,106.2" fill="none" stroke="#EB6834" stroke-width="4"/>
+<circle cx="154.5" cy="513.2" r="8" fill="#EB6834"/>
+<circle cx="481.8" cy="247.9" r="8" fill="#EB6834"/>
+<circle cx="590.9" cy="154.5" r="8" fill="#EB6834"/>
+<circle cx="645.5" cy="106.2" r="8" fill="#EB6834"/>
+<polyline points="154.5,499.2 481.8,232.7 590.9,145.8 645.5,102.1" fill="none" stroke="#1F47D6" stroke-width="5"/>
+<circle cx="154.5" cy="499.2" r="10" fill="#1F47D6"/>
+<circle cx="481.8" cy="232.7" r="10" fill="#1F47D6"/>
+<circle cx="590.9" cy="145.8" r="10" fill="#1F47D6"/>
+<circle cx="645.5" cy="102.1" r="10" fill="#1F47D6"/>
+</svg>
+<p style="position:absolute;left:40px;top:24px;width:600px;font-size:24px;color:#6B7385">Empirical vs nominal coverage (50 → 95%)</p>
+<p style="position:absolute;left:300px;top:150px;width:240px;font-size:24px;color:#1F47D6;font-weight:600">model + conformal</p>
+<p style="position:absolute;left:520px;top:300px;width:220px;font-size:24px;color:#B4501F;font-weight:600">speed fit</p>
+<p style="position:absolute;left:440px;top:540px;width:300px;font-size:24px;color:#6B7385">diagonal = perfect</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#6B7385">Real outcome data: Amazon average realised travel times. Coverage is marginal over arcs; it is not a route-level guarantee.</p>
+<aside>This is the part of the system where real outcome labels exist. The model beats a per-station speed fit by 12% on error, and after conformal calibration its intervals hit their nominal coverage on future dates: 49.7, 80.2, 90.2 and 95.2% at nominal 50, 80, 90 and 95, while being narrower than the baseline's. These intervals feed the scenario model for every arc that was estimated rather than observed.</aside>
+</section>

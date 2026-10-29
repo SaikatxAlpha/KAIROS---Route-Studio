@@ -1,0 +1,23 @@
+<section id="data" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">Data</p>
+<h2 style="font-size:72px;font-weight:700;letter-spacing:-2px;line-height:1.1">What is observed, estimated and synthetic</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #E6E7E3;border-top:6px solid #0B1324;border-radius:16px;padding:40px">
+<h3 style="font-size:44px;font-weight:700">Observed</h3>
+<p style="font-size:28px;color:#3A4458;line-height:1.45">Amazon Last Mile: 6,112 routes, 898,415 stops, all validated (0 rejected). Coordinates, average travel times, planned service, capacities, package windows (6.5% of stops), driver sequences. 56 Solomon VRPTW instances.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #E6E7E3;border-top:6px solid #5B3FAE;border-radius:16px;padding:40px">
+<h3 style="font-size:44px;font-weight:700">Model-estimated</h3>
+<p style="font-size:28px;color:#3A4458;line-height:1.45">Travel times for stop pairs never observed together (about half the arcs of merged instances, and urgent orders), with calibrated intervals from a LightGBM quantile model.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FFFFFF;border:1px solid #E6E7E3;border-top:6px solid #A8670A;border-radius:16px;padding:40px">
+<h3 style="font-size:44px;font-weight:700">Synthetic</h3>
+<p style="font-size:28px;color:#3A4458;line-height:1.45">Day-to-day variability (seeded model), all disruptions, 2-hour promise windows anchored on observed driver sequences, shift ends, reserve van.</p>
+</div>
+</div>
+<p style="font-size:28px;color:#3A4458;width:1600px">Chronological split by date: 27 train, 6 calibration, 6 test dates. 24 merged two-route instances from test dates (Los Angeles and Seattle).</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#6B7385">Amazon data: Merchán et al. (2022), Transportation Science, CC BY-NC 4.0 · Solomon (1987)</p>
+<aside>The Amazon dataset contains average historical travel times, planned service times and driver sequences, but no realised trip durations, no live traffic and no breakdowns. So we use it for what it supports: real geography, real travel-time structure, and a real-data prediction task. Everything else is labelled synthetic in the product. The split is by date to avoid same-day leakage; the last six dates only contain four stations.</aside>
+</section>

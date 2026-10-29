@@ -1,0 +1,124 @@
+.routemap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  background: var(--surface-2);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.routemap.picking .geomap,
+.routemap.picking .planemap {
+  cursor: crosshair;
+}
+.geomap,
+.planemap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.planemap .grid line {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.planemap .grid text {
+  fill: var(--ink-4);
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+.planemap .area {
+  fill: rgba(31, 71, 214, 0.06);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+.map-tooltip {
+  position: absolute;
+  transform: translate(14px, -50%);
+  z-index: 1000;
+  pointer-events: none;
+  min-width: 200px;
+  max-width: 280px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-pop);
+  padding: 10px 12px;
+  font-size: var(--fs-sm);
+}
+.map-caption {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 500;
+  max-width: calc(100% - 140px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: 6px 9px;
+  font-size: var(--fs-xs);
+  color: var(--ink-3);
+  backdrop-filter: blur(4px);
+}
+.map-pick-hint {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 600;
+  background: var(--ink);
+  color: #fff;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+.depot-icon span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: var(--ink);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.urgent-icon span {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin: 2px;
+  transform: rotate(45deg);
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* tooltip content */
+.tt-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.tt-id {
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+.tt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ink-3);
+  font-size: var(--fs-xs);
+  line-height: 1.7;
+}
+.tt-row b {
+  color: var(--ink);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

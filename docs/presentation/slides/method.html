@@ -1,0 +1,36 @@
+<section id="method" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">Reliability-aware planning</p>
+<h2 style="font-size:72px;font-weight:700;letter-spacing:-2px;line-height:1.1">The cheapest plan that meets a reliability target</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:16px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:16px;padding:32px">
+<p style="font-size:24px;color:#1F47D6;font-weight:700;font-family:'JetBrains Mono', monospace">01</p>
+<h3 style="font-size:32px;font-weight:700">Scenario model</h3>
+<p style="font-size:24px;color:#3A4458;line-height:1.4">Day, vehicle, arc and service noise; estimated arcs carry model error</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:16px;padding:32px">
+<p style="font-size:24px;color:#1F47D6;font-weight:700;font-family:'JetBrains Mono', monospace">02</p>
+<h3 style="font-size:32px;font-weight:700">Buffer ladder</h3>
+<p style="font-size:24px;color:#3A4458;line-height:1.4">PyVRP solves with durations mean + β·sd, β = 0 … 2, warm-started</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:16px;padding:32px">
+<p style="font-size:24px;color:#1F47D6;font-weight:700;font-family:'JetBrains Mono', monospace">03</p>
+<h3 style="font-size:32px;font-weight:700">In-sample test</h3>
+<p style="font-size:24px;color:#3A4458;line-height:1.4">Each candidate is simulated on 100 planning scenarios</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#1F47D6;border-radius:16px;padding:32px">
+<p style="font-size:24px;color:#C9D5FF;font-weight:700;font-family:'JetBrains Mono', monospace">04</p>
+<h3 style="font-size:32px;font-weight:700;color:#F7F7F4">Chance constraint</h3>
+<p style="font-size:24px;color:#E3E9FF;line-height:1.4">Keep the cheapest candidate whose on-time rate ≥ target</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FFFFFF;border:1px solid #E6E7E3;border-radius:16px;padding:32px">
+<p style="font-size:24px;color:#1F47D6;font-weight:700;font-family:'JetBrains Mono', monospace">05</p>
+<h3 style="font-size:32px;font-weight:700">Out-of-sample</h3>
+<p style="font-size:24px;color:#3A4458;line-height:1.4">Scored on unseen scenarios, common random numbers</p>
+</div>
+</div>
+<p style="font-size:30px;color:#3A4458;width:1600px">Same PyVRP iteration budget for every planner. The target slider is the right-hand side of the chance constraint, so it changes which plan is chosen, not a label.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#6B7385">Ablations: quantile buffer alone (one solve at z·sd) and scenario selection alone (five unbuffered solves)</p>
+<aside>A sample-average approximation of a chance constraint. Buffers alone over-protect; selection alone has nothing safer to choose from. The ladder gives the selection a spectrum from cheap to safe, and the target picks the point on it. Integer rounding is conservative so solver feasibility implies simulator feasibility.</aside>
+</section>

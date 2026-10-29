@@ -1,0 +1,28 @@
+<section id="robust" style="background:#F7F7F4;color:#0B1324;font-family:'Inter Tight', Arial, sans-serif;padding:128px 128px 160px;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+<div style="display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#1F47D6;font-weight:600;letter-spacing:3px;text-transform:uppercase">Result 4 · The target is a real control</p>
+<h2 style="font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1.1">Achieved reliability tracks the requested target</h2>
+<table style="font-size:28px;color:#0B1324">
+<tr><th style="width:25%">Target</th><th style="width:27%;text-align:right">Achieved</th><th style="width:22%;text-align:right">Met on</th><th style="width:26%;text-align:right">Cost</th></tr>
+<tr><td>85%</td><td style="text-align:right">93.6%</td><td style="text-align:right">100%</td><td style="text-align:right">+11.4%</td></tr>
+<tr><td>90%</td><td style="text-align:right">95.7%</td><td style="text-align:right">100%</td><td style="text-align:right">+14.3%</td></tr>
+<tr><td>95%</td><td style="text-align:right">97.9%</td><td style="text-align:right">100%</td><td style="text-align:right">+18.5%</td></tr>
+<tr><td>98%</td><td style="text-align:right">98.7%</td><td style="text-align:right">83%</td><td style="text-align:right">+23.4%</td></tr>
+</table>
+<p style="font-size:24px;color:#6B7385">12 Solomon instances; baseline on-time 88.1%</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;color:#C0362B;font-weight:600;letter-spacing:3px;text-transform:uppercase">Limit · model misspecification</p>
+<h2 style="font-size:56px;font-weight:700;letter-spacing:-2px;line-height:1.1">It is only as good as its uncertainty model</h2>
+<table style="font-size:28px;color:#0B1324">
+<tr><th style="width:40%">Planner assumes</th><th style="width:30%;text-align:right">Achieved</th><th style="width:30%;text-align:right">95% met on</th></tr>
+<tr><td>×0.5 true variability</td><td style="text-align:right">94.5%</td><td style="text-align:right">58%</td></tr>
+<tr><td>×0.75</td><td style="text-align:right">96.4%</td><td style="text-align:right">75%</td></tr>
+<tr><td>×1.0 (correct)</td><td style="text-align:right">97.9%</td><td style="text-align:right">100%</td></tr>
+<tr><td>×1.5</td><td style="text-align:right">97.4%</td><td style="text-align:right">83%</td></tr>
+</table>
+<p style="font-size:24px;color:#6B7385">Real deployments must calibrate variability on telematics data</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#6B7385">Higher variability raises both the gain and the cost: KAIROS +4.9 / +9.7 / +11.9 pt over baseline at low / medium / high</p>
+<aside>Two honest messages. The target slider has a real, monotone effect on the plan and its cost. But attainment depends on the planner’s variability model: underestimating dispersion by half drops target attainment to 58%. Overestimating also hurts slightly, because no candidate qualifies under the inflated model and the fallback picks the most reliable plan under the wrong model. This is the main thing to fix with real data.</aside>
+</section>

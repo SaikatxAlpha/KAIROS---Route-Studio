@@ -1,0 +1,199 @@
+{
+  "title": "Travel-time estimation model (Amazon, observed average travel times)",
+  "created": "2026-10-29T06:05:16+00:00",
+  "data": {
+    "target": "log of observed average stop-to-stop travel time (s), travel_times.json",
+    "split": "chronological by date: train / calibration / test",
+    "split_dates": {
+      "train": [
+        "2018-07-19",
+        "2018-08-14",
+        27
+      ],
+      "calibration": [
+        "2018-08-15",
+        "2018-08-20",
+        6
+      ],
+      "test": [
+        "2018-08-21",
+        "2018-08-26",
+        6
+      ]
+    },
+    "n_train_arcs": 1200000,
+    "n_calibration_arcs": 348779,
+    "n_test_arcs": 143585,
+    "arcs_per_route": 400
+  },
+  "model": {
+    "type": "LightGBM quantile regression, one model per quantile, monotone rearrangement",
+    "quantiles": [
+      0.025,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9,
+      0.95,
+      0.975
+    ],
+    "params": {
+      "objective": "quantile",
+      "learning_rate": 0.08,
+      "num_leaves": 63,
+      "min_data_in_leaf": 200,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "seed": 0,
+      "verbose": -1,
+      "num_threads": 0,
+      "num_rounds": 400
+    },
+    "calibration": "conformalized quantile regression (split conformal) per nominal level",
+    "conformal_offsets_log": {
+      "0.5": 0.00389865524852695,
+      "0.8": 0.008316418808246517,
+      "0.9": 0.013324581973313876,
+      "0.95": 0.019014871676414913
+    },
+    "fit_seconds": 84.7146246433258
+  },
+  "test": {
+    "n_arcs": 143585,
+    "mae_s": 54.323242677992226,
+    "mape": 0.19814822961566161,
+    "median_ape": 0.14256099342259976,
+    "pinball_log": {
+      "0.025": 0.014158431883422046,
+      "0.05": 0.024687839021620275,
+      "0.1": 0.041784248285027935,
+      "0.25": 0.07602561324073741,
+      "0.5": 0.09748291162514994,
+      "0.75": 0.07997411399070525,
+      "0.9": 0.0452116316715372,
+      "0.95": 0.0269985314098928,
+      "0.975": 0.015527610289856756
+    },
+    "coverage": [
+      {
+        "nominal": 0.5,
+        "raw_coverage": 0.48452832816798413,
+        "raw_rel_width": 0.3272872860859304,
+        "conformal_coverage": 0.49682069854093397,
+        "conformal_rel_width": 0.3376770104883773,
+        "route_coverage_p10": 0.415,
+        "route_coverage_p90": 0.5725
+      },
+      {
+        "nominal": 0.8,
+        "raw_coverage": 0.7877424522060104,
+        "raw_rel_width": 0.7332442102742989,
+        "conformal_coverage": 0.8020754257060277,
+        "conformal_rel_width": 0.7623140666928474,
+        "route_coverage_p10": 0.725,
+        "route_coverage_p90": 0.8675
+      },
+      {
+        "nominal": 0.9,
+        "raw_coverage": 0.888915973116969,
+        "raw_rel_width": 1.0329483541750424,
+        "conformal_coverage": 0.9017306821743218,
+        "conformal_rel_width": 1.0878530611247768,
+        "route_coverage_p10": 0.845,
+        "route_coverage_p90": 0.9475
+      },
+      {
+        "nominal": 0.95,
+        "raw_coverage": 0.941560747988996,
+        "raw_rel_width": 1.3542750809400648,
+        "conformal_coverage": 0.9518194797506704,
+        "conformal_rel_width": 1.4455317945932915,
+        "route_coverage_p10": 0.9175,
+        "route_coverage_p90": 0.98
+      }
+    ]
+  },
+  "calibration_set": {
+    "coverage": [
+      {
+        "nominal": 0.5,
+        "raw_coverage": 0.4874892123665702,
+        "raw_rel_width": 0.31151568371287364,
+        "conformal_coverage": 0.5000043007176465,
+        "conformal_rel_width": 0.3217819513446887,
+        "route_coverage_p10": 0.42,
+        "route_coverage_p90": 0.5775
+      },
+      {
+        "nominal": 0.8,
+        "raw_coverage": 0.7856235610515542,
+        "raw_rel_width": 0.6892894691561469,
+        "conformal_coverage": 0.8000051608611757,
+        "conformal_rel_width": 0.7176221195851156,
+        "route_coverage_p10": 0.72,
+        "route_coverage_p90": 0.87
+      },
+      {
+        "nominal": 0.9,
+        "raw_coverage": 0.8860854581267794,
+        "raw_rel_width": 0.9707914338096999,
+        "conformal_coverage": 0.9000054475756855,
+        "conformal_rel_width": 1.0240174421881947,
+        "route_coverage_p10": 0.8425,
+        "route_coverage_p90": 0.95
+      },
+      {
+        "nominal": 0.95,
+        "raw_coverage": 0.9387749835855943,
+        "raw_rel_width": 1.25892659589439,
+        "conformal_coverage": 0.9500055909329403,
+        "conformal_rel_width": 1.3464873993001159,
+        "route_coverage_p10": 0.9125,
+        "route_coverage_p90": 0.98225
+      }
+    ]
+  },
+  "baseline_speed_fit": {
+    "mae_s": 61.90994772234817,
+    "mape": 0.22854609346719604,
+    "median_ape": 0.1605411011764427,
+    "pinball_log_0.5": 0.10792990286940268,
+    "coverage": [
+      {
+        "nominal": 0.5,
+        "coverage": 0.48065605738761014,
+        "rel_width": 0.3542676830196154
+      },
+      {
+        "nominal": 0.8,
+        "coverage": 0.7846641362259289,
+        "rel_width": 0.8975195524900843
+      },
+      {
+        "nominal": 0.9,
+        "coverage": 0.8917017794337848,
+        "rel_width": 1.4591544433537988
+      },
+      {
+        "nominal": 0.95,
+        "coverage": 0.9471184315910436,
+        "rel_width": 2.2645918067803494
+      }
+    ]
+  },
+  "summary": {
+    "mae_s": 54.323242677992226,
+    "baseline_mae_s": 61.90994772234817,
+    "median_ape": 0.14256099342259976,
+    "baseline_median_ape": 0.1605411011764427,
+    "coverage_90_conformal": 0.9017306821743218,
+    "coverage_90_raw": 0.888915973116969
+  },
+  "caveats": [
+    "Arcs within one route are dependent; coverage is marginal over arcs and assumes exchangeability between the calibration and test date blocks.",
+    "The interval quantifies uncertainty in the average travel time of an unobserved stop pair, not day-to-day variability of individual trips (the dataset has no per-trip observations)."
+  ]
+}

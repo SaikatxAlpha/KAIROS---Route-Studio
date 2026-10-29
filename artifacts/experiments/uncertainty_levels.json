@@ -1,0 +1,6931 @@
+{
+ "title": "Uncertainty level sensitivity (Solomon subset)",
+ "created": "2026-10-29T06:26:30+00:00",
+ "config": {
+  "iterations": 5000,
+  "seed": 0,
+  "eval_scenarios": 500,
+  "planning_scenarios": 100,
+  "targets": [
+   0.95
+  ],
+  "levels": [
+   "low",
+   "medium",
+   "high"
+  ],
+  "planner_scales": [
+   1.0
+  ],
+  "methods": [
+   "deterministic",
+   "buffered",
+   "reliability"
+  ],
+  "instances": [
+   "solomon/R101",
+   "solomon/R105",
+   "solomon/R109",
+   "solomon/R202",
+   "solomon/C101",
+   "solomon/C105",
+   "solomon/C202",
+   "solomon/C206",
+   "solomon/RC101",
+   "solomon/RC105",
+   "solomon/RC202",
+   "solomon/RC206"
+  ],
+  "workers": 10,
+  "quick": false
+ },
+ "environment": {
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "pyvrp": "0.14.1",
+  "numpy": "2.4.6",
+  "lightgbm": "4.7.0",
+  "cpu_count": 20
+ },
+ "summaries": {
+  "low|x1.0|0.95": {
+   "by_group": [
+    {
+     "scope": "C1",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.85914,
+      "p_all_on_time": 0.03,
+      "violations_mean": 14.085999999999999,
+      "lateness_total_mean": 386.2992022933248,
+      "overtime_mean": 30.354408968195578,
+      "p_overtime": 0.5820000000000001,
+      "distance": 828.9368669428338,
+      "n_routes": 10.0,
+      "duration_total_mean": 9930.59041154358
+     },
+     "runtime_s_mean": 2.0193008000005648,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "C1",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99855,
+      "p_all_on_time": 0.873,
+      "violations_mean": 0.145,
+      "lateness_total_mean": 1.3830470213605286,
+      "overtime_mean": 0.05804059308722822,
+      "p_overtime": 0.002,
+      "distance": 1370.9182086944124,
+      "n_routes": 18.0,
+      "duration_total_mean": 15654.757926425544
+     },
+     "runtime_s_mean": 2.6891067000005933,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 13.941000000000008,
+       "median": 13.941000000000008,
+       "ci95": [
+        7.468000000000008,
+        20.41400000000001
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.6792575119639,
+       "median": -99.6792575119639,
+       "ci95": [
+        -99.75702121594287,
+        -99.60149380798494
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 65.38270444532606,
+       "median": 65.38270444532606,
+       "ci95": [
+        55.04878567008949,
+        75.71662322056261
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 8.0,
+       "median": 8.0,
+       "ci95": [
+        6.0,
+        10.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 84.3,
+       "median": 84.3,
+       "ci95": [
+        79.80000000000001,
+        88.79999999999998
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C1",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.97439,
+      "p_all_on_time": 0.32199999999999995,
+      "violations_mean": 2.561,
+      "lateness_total_mean": 43.59538749043511,
+      "overtime_mean": 0.14740432095101438,
+      "p_overtime": 0.008,
+      "distance": 1125.693681206404,
+      "n_routes": 13.5,
+      "duration_total_mean": 12247.791532733787
+     },
+     "runtime_s_mean": 2.7931931499997518,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 11.525000000000002,
+       "median": 11.525000000000002,
+       "ci95": [
+        6.5799999999999965,
+        16.470000000000006
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -89.74058305705472,
+       "median": -89.74058305705472,
+       "ci95": [
+        -91.88057224634746,
+        -87.60059386776197
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 35.79968826311543,
+       "median": 35.79968826311543,
+       "ci95": [
+        31.216981879158556,
+        40.382394647072296
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 3.5,
+       "median": 3.5,
+       "ci95": [
+        3.0,
+        4.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 29.200000000000003,
+       "median": 29.200000000000003,
+       "ci95": [
+        6.2,
+        52.2
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C2",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.93972,
+      "p_all_on_time": 0.21,
+      "violations_mean": 6.0280000000000005,
+      "lateness_total_mean": 312.8198517652135,
+      "overtime_mean": 39.82922302221401,
+      "p_overtime": 0.492,
+      "distance": 590.0247027170276,
+      "n_routes": 3.0,
+      "duration_total_mean": 9621.599771221026
+     },
+     "runtime_s_mean": 2.0175476000003982,
+     "target_attainment_rate": 0.5
+    },
+    {
+     "scope": "C2",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 1.0,
+      "p_all_on_time": 1.0,
+      "violations_mean": 0.0,
+      "lateness_total_mean": 0.0,
+      "overtime_mean": 0.007915410079045159,
+      "p_overtime": 0.001,
+      "distance": 770.5886709993378,
+      "n_routes": 6.0,
+      "duration_total_mean": 17394.36795771766
+     },
+     "runtime_s_mean": 2.6804078499999378,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 6.028,
+       "median": 6.028,
+       "ci95": [
+        1.6660000000000008,
+        10.389999999999999
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -100.0,
+       "median": -100.0,
+       "ci95": [
+        -100.0,
+        -100.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 30.58443972538264,
+       "median": 30.58443972538264,
+       "ci95": [
+        23.51988147315498,
+        37.6489979776103
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 3.0,
+       "median": 3.0,
+       "ci95": [
+        3.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 79.0,
+       "median": 79.0,
+       "ci95": [
+        76.4,
+        81.60000000000001
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C2",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9895,
+      "p_all_on_time": 0.534,
+      "violations_mean": 1.05,
+      "lateness_total_mean": 60.119115441946946,
+      "overtime_mean": 19.36057615581822,
+      "p_overtime": 0.23900000000000002,
+      "distance": 634.4822358822925,
+      "n_routes": 3.5,
+      "duration_total_mean": 10257.051026921901
+     },
+     "runtime_s_mean": 2.6266421999998784,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 4.978000000000005,
+       "median": 4.978000000000005,
+       "ci95": [
+        0.0,
+        9.95600000000001
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -49.10124304576286,
+       "median": -49.10124304576286,
+       "ci95": [
+        -98.20248609152571,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 7.515347884133538,
+       "median": 7.515347884133538,
+       "ci95": [
+        0.0,
+        15.030695768267076
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 0.5,
+       "median": 0.5,
+       "ci95": [
+        0.0,
+        1.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 32.4,
+       "median": 32.4,
+       "ci95": [
+        0.0,
+        64.8
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      }
+     }
+    },
+    {
+     "scope": "R1",
+     "method": "deterministic",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9416666666666668,
+      "p_all_on_time": 0.016666666666666666,
+      "violations_mean": 5.833333333333333,
+      "lateness_total_mean": 20.857692859718387,
+      "overtime_mean": 3.497915425856546,
+      "p_overtime": 0.4086666666666667,
+      "distance": 1386.0884585619458,
+      "n_routes": 16.0,
+      "duration_total_mean": 2977.3055789757614
+     },
+     "runtime_s_mean": 3.003920166666527,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "R1",
+     "method": "buffered",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9980933333333334,
+      "p_all_on_time": 0.8493333333333334,
+      "violations_mean": 0.19066666666666668,
+      "lateness_total_mean": 0.43006759058588,
+      "overtime_mean": 0.001966479865154251,
+      "p_overtime": 0.004666666666666667,
+      "distance": 1611.8786766763249,
+      "n_routes": 20.0,
+      "duration_total_mean": 3527.54781499328
+     },
+     "runtime_s_mean": 4.062111633333188,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 3,
+       "mean": 5.642666666666673,
+       "median": 5.668000000000006,
+       "ci95": [
+        5.314000000000007,
+        5.946000000000008
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 3,
+       "mean": -97.59769113556685,
+       "median": -99.64600297419305,
+       "ci95": [
+        -99.979388031658,
+        -93.1676824008495
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 3,
+       "mean": 15.723411106434218,
+       "median": 13.343606580294743,
+       "ci95": [
+        11.523491757426731,
+        22.303134981581184
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 3,
+       "mean": 4.0,
+       "median": 4.0,
+       "ci95": [
+        3.0,
+        5.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 3,
+       "mean": 83.26666666666667,
+       "median": 94.39999999999999,
+       "ci95": [
+        57.4,
+        98.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R1",
+     "method": "reliability",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9899333333333334,
+      "p_all_on_time": 0.42933333333333334,
+      "violations_mean": 1.0066666666666668,
+      "lateness_total_mean": 2.0716267511621864,
+      "overtime_mean": 0.06668664154582878,
+      "p_overtime": 0.022000000000000002,
+      "distance": 1472.0263802989157,
+      "n_routes": 18.0,
+      "duration_total_mean": 3238.2193408248204
+     },
+     "runtime_s_mean": 3.663347800000944,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 3,
+       "mean": 4.8266666666666715,
+       "median": 4.632000000000014,
+       "ci95": [
+        4.574,
+        5.274000000000001
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 3,
+       "mean": -89.44216105773619,
+       "median": -91.35844470217866,
+       "ci95": [
+        -93.98523872589847,
+        -82.98279974513136
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 3,
+       "mean": 6.1571256002762444,
+       "median": 6.438804039941659,
+       "ci95": [
+        5.038905480180178,
+        6.9936672807068945
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 3,
+       "mean": 2.0,
+       "median": 2.0,
+       "ci95": [
+        1.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 3,
+       "mean": 41.266666666666666,
+       "median": 47.8,
+       "ci95": [
+        25.2,
+        50.79999999999999
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R2",
+     "method": "deterministic",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.9935,
+      "p_all_on_time": 0.474,
+      "violations_mean": 0.65,
+      "lateness_total_mean": 1.698350000577118,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1037.2251897013998,
+      "n_routes": 7.0,
+      "duration_total_mean": 5496.816548079269
+     },
+     "runtime_s_mean": 3.2289227999990544,
+     "target_attainment_rate": 1.0
+    },
+    {
+     "scope": "R2",
+     "method": "buffered",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 1.0,
+      "p_all_on_time": 1.0,
+      "violations_mean": 0.0,
+      "lateness_total_mean": 0.0,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1064.3854294829807,
+      "n_routes": 7.0,
+      "duration_total_mean": 5575.017585721884
+     },
+     "runtime_s_mean": 3.1334286000001157,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 1,
+       "mean": 0.649999999999995,
+       "median": 0.649999999999995,
+       "ci95": [
+        0.649999999999995,
+        0.649999999999995
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 1,
+       "mean": -100.0,
+       "median": -100.0,
+       "ci95": [
+        -100.0,
+        -100.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 1,
+       "mean": 2.6185480309632636,
+       "median": 2.6185480309632636,
+       "ci95": [
+        2.6185480309632636,
+        2.6185480309632636
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 1,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 1,
+       "mean": 52.6,
+       "median": 52.6,
+       "ci95": [
+        52.6,
+        52.6
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R2",
+     "method": "reliability",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.99334,
+      "p_all_on_time": 0.484,
+      "violations_mean": 0.666,
+      "lateness_total_mean": 1.8914553829680667,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1039.2557818243276,
+      "n_routes": 7.0,
+      "duration_total_mean": 5511.1315611323025
+     },
+     "runtime_s_mean": 3.8348294000006717,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 1,
+       "mean": -0.0160000000000049,
+       "median": -0.0160000000000049,
+       "ci95": [
+        -0.0160000000000049,
+        -0.0160000000000049
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "lateness_total_rel": {
+       "n": 1,
+       "mean": 11.370175895741715,
+       "median": 11.370175895741715,
+       "ci95": [
+        11.370175895741715,
+        11.370175895741715
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "distance_rel_pct": {
+       "n": 1,
+       "mean": 0.19577157815771074,
+       "median": 0.19577157815771074,
+       "ci95": [
+        0.19577157815771074,
+        0.19577157815771074
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 1,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 1,
+       "mean": 1.0000000000000009,
+       "median": 1.0000000000000009,
+       "ci95": [
+        1.0000000000000009,
+        1.0000000000000009
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC1",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9359299999999999,
+      "p_all_on_time": 0.019,
+      "violations_mean": 6.407,
+      "lateness_total_mean": 26.245466408784992,
+      "overtime_mean": 4.358733864917912,
+      "p_overtime": 0.469,
+      "distance": 1593.8709096551383,
+      "n_routes": 16.0,
+      "duration_total_mean": 3163.225114231378
+     },
+     "runtime_s_mean": 2.800190500000099,
+     "target_attainment_rate": 0.5
+    },
+    {
+     "scope": "RC1",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99962,
+      "p_all_on_time": 0.9630000000000001,
+      "violations_mean": 0.038000000000000006,
+      "lateness_total_mean": 0.0507227639940444,
+      "overtime_mean": 0.18929778584354792,
+      "p_overtime": 0.057,
+      "distance": 1914.1069837623636,
+      "n_routes": 20.5,
+      "duration_total_mean": 3849.6268634603293
+     },
+     "runtime_s_mean": 2.9108734000001277,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 6.369000000000002,
+       "median": 6.369000000000002,
+       "ci95": [
+        4.992000000000008,
+        7.745999999999997
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.83012819455715,
+       "median": -99.83012819455715,
+       "ci95": [
+        -99.97665188588672,
+        -99.68360450322758
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 20.173932439042588,
+       "median": 20.173932439042588,
+       "ci95": [
+        17.20449450961885,
+        23.14337036846632
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 4.5,
+       "median": 4.5,
+       "ci95": [
+        4.0,
+        5.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 94.4,
+       "median": 94.4,
+       "ci95": [
+        92.60000000000001,
+        96.2
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC1",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9924200000000001,
+      "p_all_on_time": 0.5429999999999999,
+      "violations_mean": 0.758,
+      "lateness_total_mean": 1.6393343472377413,
+      "overtime_mean": 0.8470086807518127,
+      "p_overtime": 0.181,
+      "distance": 1699.1611361736564,
+      "n_routes": 18.0,
+      "duration_total_mean": 3467.415165971959
+     },
+     "runtime_s_mean": 3.122703800000636,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 5.64900000000001,
+       "median": 5.64900000000001,
+       "ci95": [
+        4.546000000000006,
+        6.752000000000013
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -93.92559932270069,
+       "median": -93.92559932270069,
+       "ci95": [
+        -95.00152342112487,
+        -92.8496752242765
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 6.595467091217078,
+       "median": 6.595467091217078,
+       "ci95": [
+        6.217037150727367,
+        6.973897031706788
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 2.0,
+       "median": 2.0,
+       "ci95": [
+        1.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 52.39999999999999,
+       "median": 52.39999999999999,
+       "ci95": [
+        37.6,
+        67.19999999999999
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC2",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99456,
+      "p_all_on_time": 0.586,
+      "violations_mean": 0.544,
+      "lateness_total_mean": 1.3482792093181493,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1082.1393479274573,
+      "n_routes": 6.5,
+      "duration_total_mean": 4676.354264016009
+     },
+     "runtime_s_mean": 2.81720949999999,
+     "target_attainment_rate": 1.0
+    },
+    {
+     "scope": "RC2",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99997,
+      "p_all_on_time": 0.997,
+      "violations_mean": 0.003,
+      "lateness_total_mean": 0.0018671937180315013,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1100.2095121233415,
+      "n_routes": 7.0,
+      "duration_total_mean": 4937.447719634828
+     },
+     "runtime_s_mean": 3.007290400000784,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 0.5410000000000026,
+       "median": 0.5410000000000026,
+       "ci95": [
+        0.49999999999998934,
+        0.5820000000000158
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.86992140439308,
+       "median": -99.86992140439308,
+       "ci95": [
+        -100.0,
+        -99.73984280878616
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 1.6559743764021362,
+       "median": 1.6559743764021362,
+       "ci95": [
+        0.7553839994397515,
+        2.556564753364521
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 0.5,
+       "median": 0.5,
+       "ci95": [
+        -1.0,
+        2.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 41.10000000000001,
+       "median": 41.10000000000001,
+       "ci95": [
+        39.800000000000004,
+        42.400000000000006
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC2",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99417,
+      "p_all_on_time": 0.534,
+      "violations_mean": 0.583,
+      "lateness_total_mean": 2.0125743892847394,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1083.8773065953806,
+      "n_routes": 6.5,
+      "duration_total_mean": 4668.538865920162
+     },
+     "runtime_s_mean": 3.1148293999995076,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": -0.039000000000000146,
+       "median": -0.039000000000000146,
+       "ci95": [
+        -0.07800000000000029,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": 52.674875588447044,
+       "median": 52.674875588447044,
+       "ci95": [
+        0.0,
+        105.34975117689409
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 0.1631181742000165,
+       "median": 0.1631181742000165,
+       "ci95": [
+        0.0,
+        0.326236348400033
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": -5.199999999999999,
+       "median": -5.199999999999999,
+       "ci95": [
+        -10.399999999999999,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      }
+     }
+    }
+   ],
+   "overall": [
+    {
+     "scope": "overall",
+     "method": "deterministic",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9397666666666668,
+      "p_all_on_time": 0.1845,
+      "violations_mean": 6.023333333333333,
+      "lateness_total_mean": 126.47475232775126,
+      "overtime_mean": 13.29820649901872,
+      "p_overtime": 0.35933333333333334,
+      "distance": 1115.4528516560126,
+      "n_routes": 10.5,
+      "duration_total_mean": 5767.689367252544
+     },
+     "runtime_s_mean": 2.629098341666728,
+     "target_attainment_rate": 0.4166666666666667
+    },
+    {
+     "scope": "overall",
+     "method": "buffered",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9992133333333335,
+      "p_all_on_time": 0.9345,
+      "violations_mean": 0.07866666666666668,
+      "lateness_total_mean": 0.3467897274919041,
+      "overtime_mean": 0.04303391813459212,
+      "p_overtime": 0.011166666666666667,
+      "distance": 1350.9723508892387,
+      "n_routes": 14.166666666666666,
+      "duration_total_mean": 8319.171830431538
+     },
+     "runtime_s_mean": 3.1579266833335473,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 12,
+       "mean": 5.94466666666667,
+       "median": 5.491000000000007,
+       "ci95": [
+        3.275583333333335,
+        9.317004166666665
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 12,
+       "mean": -99.29597396904406,
+       "median": -99.8668365509148,
+       "ci95": [
+        -99.91707318628414,
+        -98.14623545486596
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 12,
+       "mean": 23.781906943547725,
+       "median": 19.753814745600017,
+       "ci95": [
+        12.55327028948032,
+        37.169690450359695
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 12,
+       "mean": 3.6666666666666665,
+       "median": 3.5,
+       "ci95": [
+        2.1666666666666665,
+        5.333333333333333
+       ],
+       "wilcoxon_p": 0.001953125,
+       "share_positive": 0.8333333333333334
+      },
+      "p_all_on_time_pt": {
+       "n": 12,
+       "mean": 75.0,
+       "median": 80.70000000000002,
+       "ci95": [
+        63.182916666666664,
+        86.05
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "overall",
+     "method": "reliability",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9886750000000002,
+      "p_all_on_time": 0.4698333333333334,
+      "violations_mean": 1.1324999999999998,
+      "lateness_total_mean": 18.569929914521975,
+      "overtime_mean": 3.409169853306631,
+      "p_overtime": 0.07683333333333332,
+      "distance": 1211.8136368697117,
+      "n_routes": 12.0,
+      "duration_total_mean": 6375.615230558532
+     },
+     "runtime_s_mean": 3.1783008250002545,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 12,
+       "mean": 4.890833333333337,
+       "median": 4.603000000000007,
+       "ci95": [
+        2.4656583333333355,
+        7.76627916666667
+       ],
+       "wilcoxon_p": 0.013671875,
+       "share_positive": 0.6666666666666666
+      },
+      "lateness_total_rel": {
+       "n": 12,
+       "mean": -51.428450579300765,
+       "median": -89.47951928497031,
+       "ci95": [
+        -84.06422285908984,
+        -12.808102738781695
+       ],
+       "wilcoxon_p": 0.083984375,
+       "share_positive": 0.16666666666666666
+      },
+      "distance_rel_pct": {
+       "n": 12,
+       "mean": 9.901199267026547,
+       "median": 6.327920595334513,
+       "ci95": [
+        3.730615446689906,
+        17.55246927374036
+       ],
+       "wilcoxon_p": 0.001953125,
+       "share_positive": 0.8333333333333334
+      },
+      "vehicles_delta": {
+       "n": 12,
+       "mean": 1.5,
+       "median": 1.0,
+       "ci95": [
+        0.75,
+        2.3333333333333335
+       ],
+       "wilcoxon_p": 0.0078125,
+       "share_positive": 0.6666666666666666
+      },
+      "p_all_on_time_pt": {
+       "n": 12,
+       "mean": 28.533333333333335,
+       "median": 31.4,
+       "ci95": [
+        13.366666666666667,
+        43.73375
+       ],
+       "wilcoxon_p": 0.0078125,
+       "share_positive": 0.75
+      }
+     }
+    }
+   ],
+   "failures": []
+  },
+  "medium|x1.0|0.95": {
+   "by_group": [
+    {
+     "scope": "C1",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.7283900000000001,
+      "p_all_on_time": 0.001,
+      "violations_mean": 27.161,
+      "lateness_total_mean": 1603.4526446679968,
+      "overtime_mean": 88.28166428360569,
+      "p_overtime": 0.774,
+      "distance": 828.9368669428338,
+      "n_routes": 10.0,
+      "duration_total_mean": 10188.338473833603
+     },
+     "runtime_s_mean": 2.157114499999807,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "C1",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99324,
+      "p_all_on_time": 0.5449999999999999,
+      "violations_mean": 0.6759999999999999,
+      "lateness_total_mean": 16.317025822270683,
+      "overtime_mean": 0.5723004227319013,
+      "p_overtime": 0.031,
+      "distance": 1486.5169359880995,
+      "n_routes": 20.0,
+      "duration_total_mean": 17212.310473983598
+     },
+     "runtime_s_mean": 2.625100499999462,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 26.484999999999996,
+       "median": 26.484999999999996,
+       "ci95": [
+        19.697999999999993,
+        33.272
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.03811413410108,
+       "median": -99.03811413410108,
+       "ci95": [
+        -99.23985174494048,
+        -98.83637652326168
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 79.32812440475212,
+       "median": 79.32812440475212,
+       "ci95": [
+        76.42023685386935,
+        82.23601195563486
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 10.0,
+       "median": 10.0,
+       "ci95": [
+        10.0,
+        10.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 54.39999999999999,
+       "median": 54.39999999999999,
+       "ci95": [
+        39.6,
+        69.19999999999999
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C1",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9657800000000001,
+      "p_all_on_time": 0.078,
+      "violations_mean": 3.4219999999999997,
+      "lateness_total_mean": 117.21492767200631,
+      "overtime_mean": 4.1791094658752055,
+      "p_overtime": 0.104,
+      "distance": 1325.7319242985752,
+      "n_routes": 17.0,
+      "duration_total_mean": 15401.635302046518
+     },
+     "runtime_s_mean": 2.740234299999429,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 23.73900000000001,
+       "median": 23.73900000000001,
+       "ci95": [
+        15.422000000000002,
+        32.05600000000002
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -90.92678175870756,
+       "median": -90.92678175870756,
+       "ci95": [
+        -97.3086342240919,
+        -84.54492929332324
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 59.93159155629666,
+       "median": 59.93159155629666,
+       "ci95": [
+        41.004260586695395,
+        78.85892252589792
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 7.0,
+       "median": 7.0,
+       "ci95": [
+        4.0,
+        10.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 7.7,
+       "median": 7.7,
+       "ci95": [
+        5.0,
+        10.4
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C2",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.8592200000000001,
+      "p_all_on_time": 0.088,
+      "violations_mean": 14.078,
+      "lateness_total_mean": 1465.0137558663241,
+      "overtime_mean": 108.22686633547167,
+      "p_overtime": 0.618,
+      "distance": 590.0247027170276,
+      "n_routes": 3.0,
+      "duration_total_mean": 9746.02309635061
+     },
+     "runtime_s_mean": 1.9051403499997832,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "C2",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99965,
+      "p_all_on_time": 0.967,
+      "violations_mean": 0.034999999999999996,
+      "lateness_total_mean": 1.016326936549151,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 846.3225695096901,
+      "n_routes": 6.0,
+      "duration_total_mean": 17562.261858238388
+     },
+     "runtime_s_mean": 2.8881711499998346,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 14.043,
+       "median": 14.043,
+       "ci95": [
+        6.694,
+        21.392
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.92725589033515,
+       "median": -99.92725589033515,
+       "ci95": [
+        -99.93360393487282,
+        -99.92090784579749
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 43.42176705386332,
+       "median": 43.42176705386332,
+       "ci95": [
+        36.977626714181675,
+        49.86590739354497
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 3.0,
+       "median": 3.0,
+       "ci95": [
+        3.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 87.89999999999999,
+       "median": 87.89999999999999,
+       "ci95": [
+        82.19999999999999,
+        93.6
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C2",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99177,
+      "p_all_on_time": 0.7070000000000001,
+      "violations_mean": 0.823,
+      "lateness_total_mean": 38.551707710393636,
+      "overtime_mean": 2.101649183096945,
+      "p_overtime": 0.048,
+      "distance": 725.3505977077451,
+      "n_routes": 6.0,
+      "duration_total_mean": 16644.970955244353
+     },
+     "runtime_s_mean": 2.8495843000000605,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 13.254999999999999,
+       "median": 13.254999999999999,
+       "ci95": [
+        6.525999999999998,
+        19.984
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -97.62917224896925,
+       "median": -97.62917224896925,
+       "ci95": [
+        -98.1200496833615,
+        -97.13829481457701
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 22.923114097812313,
+       "median": 22.923114097812313,
+       "ci95": [
+        18.101559053367943,
+        27.744669142256683
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 3.0,
+       "median": 3.0,
+       "ci95": [
+        3.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 61.900000000000006,
+       "median": 61.900000000000006,
+       "ci95": [
+        46.4,
+        77.4
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R1",
+     "method": "deterministic",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.8893800000000001,
+      "p_all_on_time": 0.004,
+      "violations_mean": 11.062,
+      "lateness_total_mean": 84.35441980142325,
+      "overtime_mean": 14.115452170503929,
+      "p_overtime": 0.65,
+      "distance": 1386.0884585619458,
+      "n_routes": 16.0,
+      "duration_total_mean": 3000.242109971801
+     },
+     "runtime_s_mean": 2.9394183333339847,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "R1",
+     "method": "buffered",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9831333333333333,
+      "p_all_on_time": 0.598,
+      "violations_mean": 1.6866666666666668,
+      "lateness_total_mean": 16.655966282280783,
+      "overtime_mean": 0.6685171369489659,
+      "p_overtime": 0.10200000000000002,
+      "distance": 1773.6870499853314,
+      "n_routes": 23.0,
+      "duration_total_mean": 3987.163612279217
+     },
+     "runtime_s_mean": 5.005481199999849,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 3,
+       "mean": 9.375333333333336,
+       "median": 9.462000000000014,
+       "ci95": [
+        7.526,
+        11.137999999999993
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 3,
+       "mean": -78.94256189423427,
+       "median": -98.88468915398225,
+       "ci95": [
+        -99.71842669890498,
+        -38.22456982981559
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 3,
+       "mean": 28.211157513498716,
+       "median": 29.143925923010848,
+       "ci95": [
+        25.25458120267099,
+        30.234965414814297
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 3,
+       "mean": 7.0,
+       "median": 7.0,
+       "ci95": [
+        5.0,
+        9.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 3,
+       "mean": 59.4,
+       "median": 84.0,
+       "ci95": [
+        0.0,
+        94.19999999999999
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "scope": "R1",
+     "method": "reliability",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9747466666666668,
+      "p_all_on_time": 0.21866666666666668,
+      "violations_mean": 2.525333333333333,
+      "lateness_total_mean": 13.533172759637852,
+      "overtime_mean": 1.6975004918734744,
+      "p_overtime": 0.21866666666666668,
+      "distance": 1547.531027560647,
+      "n_routes": 19.333333333333332,
+      "duration_total_mean": 3432.362950077879
+     },
+     "runtime_s_mean": 4.249957533332538,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 3,
+       "mean": 8.53666666666667,
+       "median": 8.362000000000002,
+       "ci95": [
+        8.318000000000003,
+        8.930000000000005
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 3,
+       "mean": -83.69792893825915,
+       "median": -84.07152867087412,
+       "ci95": [
+        -91.95737121770843,
+        -75.0648869261949
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 3,
+       "mean": 11.300754323845021,
+       "median": 10.562012617555784,
+       "ci95": [
+        7.487504534211408,
+        15.852745819767877
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 3,
+       "mean": 3.3333333333333335,
+       "median": 3.0,
+       "ci95": [
+        2.0,
+        5.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 3,
+       "mean": 21.46666666666667,
+       "median": 13.4,
+       "ci95": [
+        9.0,
+        42.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R2",
+     "method": "deterministic",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.9861800000000001,
+      "p_all_on_time": 0.24,
+      "violations_mean": 1.382,
+      "lateness_total_mean": 8.361105407294712,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1037.2251897013998,
+      "n_routes": 7.0,
+      "duration_total_mean": 5498.308556557078
+     },
+     "runtime_s_mean": 3.389523999998346,
+     "target_attainment_rate": 1.0
+    },
+    {
+     "scope": "R2",
+     "method": "buffered",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.9998,
+      "p_all_on_time": 0.98,
+      "violations_mean": 0.02,
+      "lateness_total_mean": 0.10046164033448712,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1098.7771935457426,
+      "n_routes": 9.0,
+      "duration_total_mean": 6744.19224893681
+     },
+     "runtime_s_mean": 3.5250140000007377,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 1,
+       "mean": 1.3619999999999965,
+       "median": 1.3619999999999965,
+       "ci95": [
+        1.3619999999999965,
+        1.3619999999999965
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 1,
+       "mean": -98.7984646115472,
+       "median": -98.7984646115472,
+       "ci95": [
+        -98.7984646115472,
+        -98.7984646115472
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 1,
+       "mean": 5.9342951227459695,
+       "median": 5.9342951227459695,
+       "ci95": [
+        5.9342951227459695,
+        5.9342951227459695
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 1,
+       "mean": 2.0,
+       "median": 2.0,
+       "ci95": [
+        2.0,
+        2.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 1,
+       "mean": 74.0,
+       "median": 74.0,
+       "ci95": [
+        74.0,
+        74.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R2",
+     "method": "reliability",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.9843800000000001,
+      "p_all_on_time": 0.226,
+      "violations_mean": 1.562,
+      "lateness_total_mean": 10.20484850729557,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1039.2557818243276,
+      "n_routes": 7.0,
+      "duration_total_mean": 5512.228623558824
+     },
+     "runtime_s_mean": 3.8685169000000315,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 1,
+       "mean": -0.17999999999999128,
+       "median": -0.17999999999999128,
+       "ci95": [
+        -0.17999999999999128,
+        -0.17999999999999128
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "lateness_total_rel": {
+       "n": 1,
+       "mean": 22.05142753483611,
+       "median": 22.05142753483611,
+       "ci95": [
+        22.05142753483611,
+        22.05142753483611
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "distance_rel_pct": {
+       "n": 1,
+       "mean": 0.19577157815771074,
+       "median": 0.19577157815771074,
+       "ci95": [
+        0.19577157815771074,
+        0.19577157815771074
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 1,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 1,
+       "mean": -1.3999999999999986,
+       "median": -1.3999999999999986,
+       "ci95": [
+        -1.3999999999999986,
+        -1.3999999999999986
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      }
+     }
+    },
+    {
+     "scope": "RC1",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.88788,
+      "p_all_on_time": 0.005,
+      "violations_mean": 11.212,
+      "lateness_total_mean": 101.58297739589392,
+      "overtime_mean": 21.439423512513535,
+      "p_overtime": 0.73,
+      "distance": 1593.8709096551383,
+      "n_routes": 16.0,
+      "duration_total_mean": 3191.0829004187494
+     },
+     "runtime_s_mean": 2.854422149999664,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "RC1",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9971700000000001,
+      "p_all_on_time": 0.815,
+      "violations_mean": 0.28300000000000003,
+      "lateness_total_mean": 2.065883625782969,
+      "overtime_mean": 3.1135536642638932,
+      "p_overtime": 0.28400000000000003,
+      "distance": 2215.650753327597,
+      "n_routes": 25.0,
+      "duration_total_mean": 4630.50070863896
+     },
+     "runtime_s_mean": 4.438414850000299,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 10.929000000000011,
+       "median": 10.929000000000011,
+       "ci95": [
+        8.956000000000019,
+        12.902000000000003
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -98.00743034578824,
+       "median": -98.00743034578824,
+       "ci95": [
+        -98.28554783782553,
+        -97.72931285375095
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 38.990127351438744,
+       "median": 38.990127351438744,
+       "ci95": [
+        38.24787077927709,
+        39.73238392360039
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 9.0,
+       "median": 9.0,
+       "ci95": [
+        9.0,
+        9.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 81.0,
+       "median": 81.0,
+       "ci95": [
+        76.0,
+        86.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC1",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9740200000000001,
+      "p_all_on_time": 0.198,
+      "violations_mean": 2.598,
+      "lateness_total_mean": 16.99770184301468,
+      "overtime_mean": 7.578138261956824,
+      "p_overtime": 0.51,
+      "distance": 1770.5966101393271,
+      "n_routes": 19.0,
+      "duration_total_mean": 3636.913950512042
+     },
+     "runtime_s_mean": 4.115415199999916,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 8.614000000000004,
+       "median": 8.614000000000004,
+       "ci95": [
+        7.020000000000004,
+        10.208000000000006
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -83.57018495381124,
+       "median": -83.57018495381124,
+       "ci95": [
+        -85.61955514494072,
+        -81.52081476268174
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 11.051790137599493,
+       "median": 11.051790137599493,
+       "ci95": [
+        9.75006136565737,
+        12.353518909541616
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 3.0,
+       "median": 3.0,
+       "ci95": [
+        2.0,
+        4.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 19.3,
+       "median": 19.3,
+       "ci95": [
+        12.6,
+        26.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC2",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9856400000000001,
+      "p_all_on_time": 0.275,
+      "violations_mean": 1.436,
+      "lateness_total_mean": 9.637288700700257,
+      "overtime_mean": 0.10170519528463967,
+      "p_overtime": 0.01,
+      "distance": 1082.1393479274573,
+      "n_routes": 6.5,
+      "duration_total_mean": 4678.352424349456
+     },
+     "runtime_s_mean": 2.831637299999784,
+     "target_attainment_rate": 1.0
+    },
+    {
+     "scope": "RC2",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9998100000000001,
+      "p_all_on_time": 0.983,
+      "violations_mean": 0.019000000000000003,
+      "lateness_total_mean": 0.03954664492915873,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1124.8444395176925,
+      "n_routes": 8.0,
+      "duration_total_mean": 5435.531949581558
+     },
+     "runtime_s_mean": 2.999494550000236,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 1.4170000000000016,
+       "median": 1.4170000000000016,
+       "ci95": [
+        1.3460000000000027,
+        1.4880000000000004
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.59893509576824,
+       "median": -99.59893509576824,
+       "ci95": [
+        -99.80934105693862,
+        -99.38852913459787
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 3.951399637078512,
+       "median": 3.951399637078512,
+       "ci95": [
+        3.624299239319151,
+        4.278500034837873
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 1.5,
+       "median": 1.5,
+       "ci95": [
+        0.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 70.8,
+       "median": 70.8,
+       "ci95": [
+        67.8,
+        73.8
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC2",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9860800000000001,
+      "p_all_on_time": 0.259,
+      "violations_mean": 1.392,
+      "lateness_total_mean": 10.646750202414179,
+      "overtime_mean": 0.10170519528463967,
+      "p_overtime": 0.01,
+      "distance": 1083.8773065953806,
+      "n_routes": 6.5,
+      "duration_total_mean": 4669.959764327484
+     },
+     "runtime_s_mean": 3.121899200000371,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 0.044000000000005146,
+       "median": 0.044000000000005146,
+       "ci95": [
+        0.0,
+        0.08800000000001029
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": 10.958131085941835,
+       "median": 10.958131085941835,
+       "ci95": [
+        0.0,
+        21.91626217188367
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 0.1631181742000165,
+       "median": 0.1631181742000165,
+       "ci95": [
+        0.0,
+        0.326236348400033
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": -1.6000000000000014,
+       "median": -1.6000000000000014,
+       "ci95": [
+        -3.200000000000003,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      }
+     }
+    }
+   ],
+   "overall": [
+    {
+     "scope": "overall",
+     "method": "deterministic",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.8813816666666666,
+      "p_all_on_time": 0.0825,
+      "violations_mean": 11.861833333333331,
+      "lateness_total_mean": 551.7331415061162,
+      "overtime_mean": 39.870472930438574,
+      "p_overtime": 0.5178333333333333,
+      "distance": 1115.4528516560126,
+      "n_routes": 10.5,
+      "duration_total_mean": 5842.2190563647755
+     },
+     "runtime_s_mean": 2.6420339666665313,
+     "target_attainment_rate": 0.25
+    },
+    {
+     "scope": "overall",
+     "method": "buffered",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9940783333333334,
+      "p_all_on_time": 0.7828333333333335,
+      "violations_mean": 0.5921666666666666,
+      "lateness_total_mean": 7.412160545520062,
+      "overtime_mean": 0.7814382987365406,
+      "p_overtime": 0.078,
+      "distance": 1480.5423116823247,
+      "n_routes": 16.333333333333332,
+      "duration_total_mean": 9032.24108888829
+     },
+     "runtime_s_mean": 3.7036516416666623,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 12,
+       "mean": 11.269666666666668,
+       "median": 9.209000000000017,
+       "ci95": [
+        6.496595833333334,
+        16.815391666666667
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 12,
+       "mean": -94.06413510218628,
+       "median": -99.06227044946137,
+       "ci95": [
+        -99.4225181179437,
+        -83.77602214351937
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 12,
+       "mean": 35.162550379792286,
+       "median": 33.60629606449798,
+       "ci95": [
+        21.78508377198116,
+        49.4186230976831
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 12,
+       "mean": 5.833333333333333,
+       "median": 6.0,
+       "ci95": [
+        3.9166666666666665,
+        7.75
+       ],
+       "wilcoxon_p": 0.0009765625,
+       "share_positive": 0.9166666666666666
+      },
+      "p_all_on_time_pt": {
+       "n": 12,
+       "mean": 70.03333333333332,
+       "median": 75.0,
+       "ci95": [
+        53.982916666666654,
+        82.14999999999999
+       ],
+       "wilcoxon_p": 0.0009765625,
+       "share_positive": 0.9166666666666666
+      }
+     }
+    },
+    {
+     "scope": "overall",
+     "method": "reliability",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9786600000000001,
+      "p_all_on_time": 0.2805,
+      "violations_mean": 2.134,
+      "lateness_total_mean": 34.802211803488895,
+      "overtime_mean": 2.751142140670638,
+      "p_overtime": 0.16666666666666666,
+      "distance": 1291.0801451656937,
+      "n_routes": 13.5,
+      "duration_total_mean": 8043.023118171103
+     },
+     "runtime_s_mean": 3.5227212916664334,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 12,
+       "mean": 9.72783333333334,
+       "median": 8.340000000000003,
+       "ci95": [
+        5.164120833333339,
+        15.275229166666676
+       ],
+       "wilcoxon_p": 0.0029296875,
+       "share_positive": 0.8333333333333334
+      },
+      "lateness_total_rel": {
+       "n": 12,
+       "mean": -62.61486458591947,
+       "median": -84.30822898209868,
+       "ci95": [
+        -86.85360144849761,
+        -35.025596897602995
+       ],
+       "wilcoxon_p": 0.005859375,
+       "share_positive": 0.16666666666666666
+      },
+      "distance_rel_pct": {
+       "n": 12,
+       "mean": 18.519771873459145,
+       "median": 11.4577657635487,
+       "ci95": [
+        8.237903817597408,
+        32.407952920091795
+       ],
+       "wilcoxon_p": 0.0009765625,
+       "share_positive": 0.9166666666666666
+      },
+      "vehicles_delta": {
+       "n": 12,
+       "mean": 3.0,
+       "median": 3.0,
+       "ci95": [
+        1.6666666666666667,
+        4.666666666666667
+       ],
+       "wilcoxon_p": 0.00390625,
+       "share_positive": 0.75
+      },
+      "p_all_on_time_pt": {
+       "n": 12,
+       "mean": 19.8,
+       "median": 11.5,
+       "ci95": [
+        7.782500000000004,
+        34.21708333333333
+       ],
+       "wilcoxon_p": 0.005859375,
+       "share_positive": 0.75
+      }
+     }
+    }
+   ],
+   "failures": []
+  },
+  "high|x1.0|0.95": {
+   "by_group": [
+    {
+     "scope": "C1",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.6557599999999999,
+      "p_all_on_time": 0.0,
+      "violations_mean": 34.424,
+      "lateness_total_mean": 3287.0985896732564,
+      "overtime_mean": 209.16089337884478,
+      "p_overtime": 0.897,
+      "distance": 828.9368669428338,
+      "n_routes": 10.0,
+      "duration_total_mean": 10478.447827759624
+     },
+     "runtime_s_mean": 1.9770554500000799,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "C1",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.98709,
+      "p_all_on_time": 0.311,
+      "violations_mean": 1.291,
+      "lateness_total_mean": 53.58303622775718,
+      "overtime_mean": 5.04693234114626,
+      "p_overtime": 0.13,
+      "distance": 1732.01971653591,
+      "n_routes": 22.5,
+      "duration_total_mean": 19694.812265615485
+     },
+     "runtime_s_mean": 3.553135250000196,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 33.13300000000001,
+       "median": 33.13300000000001,
+       "ci95": [
+        26.78800000000001,
+        39.478
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -98.28899506696888,
+       "median": -98.28899506696888,
+       "ci95": [
+        -98.70882352839668,
+        -97.86916660554108
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 108.94470804799607,
+       "median": 108.94470804799607,
+       "ci95": [
+        82.20821648325311,
+        135.68119961273902
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 12.5,
+       "median": 12.5,
+       "ci95": [
+        10.0,
+        15.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 31.1,
+       "median": 31.1,
+       "ci95": [
+        30.8,
+        31.4
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C1",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.96531,
+      "p_all_on_time": 0.074,
+      "violations_mean": 3.469,
+      "lateness_total_mean": 158.6428964011215,
+      "overtime_mean": 9.550001286129028,
+      "p_overtime": 0.184,
+      "distance": 1479.8920249446087,
+      "n_routes": 20.0,
+      "duration_total_mean": 17380.733521310358
+     },
+     "runtime_s_mean": 3.7450100499991095,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 30.955000000000005,
+       "median": 30.955000000000005,
+       "ci95": [
+        25.514000000000014,
+        36.395999999999994
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -95.21395220259338,
+       "median": -95.21395220259338,
+       "ci95": [
+        -95.42246068462158,
+        -95.00544372056517
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 78.52891866210928,
+       "median": 78.52891866210928,
+       "ci95": [
+        75.8521366031605,
+        81.20570072105804
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 10.0,
+       "median": 10.0,
+       "ci95": [
+        10.0,
+        10.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 7.4,
+       "median": 7.4,
+       "ci95": [
+        2.0,
+        12.8
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C2",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.7873800000000001,
+      "p_all_on_time": 0.059000000000000004,
+      "violations_mean": 21.262,
+      "lateness_total_mean": 3373.6951295356284,
+      "overtime_mean": 233.1231308073905,
+      "p_overtime": 0.742,
+      "distance": 590.0247027170276,
+      "n_routes": 3.0,
+      "duration_total_mean": 9911.15324228957
+     },
+     "runtime_s_mean": 1.9508000000005268,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "C2",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99821,
+      "p_all_on_time": 0.861,
+      "violations_mean": 0.17900000000000002,
+      "lateness_total_mean": 7.529968727338641,
+      "overtime_mean": 0.5705498659825607,
+      "p_overtime": 0.015,
+      "distance": 935.0467115950022,
+      "n_routes": 6.5,
+      "duration_total_mean": 17835.05775701531
+     },
+     "runtime_s_mean": 2.9885789999989356,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 21.082999999999995,
+       "median": 21.082999999999995,
+       "ci95": [
+        13.41199999999998,
+        28.754000000000012
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.82998462283902,
+       "median": -99.82998462283902,
+       "ci95": [
+        -99.9642060630506,
+        -99.69576318262743
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 58.4565062168455,
+       "median": 58.4565062168455,
+       "ci95": [
+        51.00267206131852,
+        65.91034037237247
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 3.5,
+       "median": 3.5,
+       "ci95": [
+        3.0,
+        4.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 80.19999999999999,
+       "median": 80.19999999999999,
+       "ci95": [
+        73.8,
+        86.6
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "C2",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.98128,
+      "p_all_on_time": 0.42300000000000004,
+      "violations_mean": 1.8719999999999999,
+      "lateness_total_mean": 125.11649887098517,
+      "overtime_mean": 12.361536891360497,
+      "p_overtime": 0.156,
+      "distance": 767.5860282147414,
+      "n_routes": 5.5,
+      "duration_total_mean": 16293.616563260854
+     },
+     "runtime_s_mean": 3.0235211999997773,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 19.389999999999993,
+       "median": 19.389999999999993,
+       "ci95": [
+        12.455999999999989,
+        26.324
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -96.30479027913935,
+       "median": -96.30479027913935,
+       "ci95": [
+        -96.33855858054498,
+        -96.27102197773371
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 30.074386275172508,
+       "median": 30.074386275172508,
+       "ci95": [
+        22.566014911123933,
+        37.58275763922108
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 2.5,
+       "median": 2.5,
+       "ci95": [
+        2.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 36.400000000000006,
+       "median": 36.400000000000006,
+       "ci95": [
+        19.0,
+        53.800000000000004
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R1",
+     "method": "deterministic",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.8381333333333334,
+      "p_all_on_time": 0.0026666666666666666,
+      "violations_mean": 16.186666666666667,
+      "lateness_total_mean": 218.87345514256393,
+      "overtime_mean": 39.515313803122304,
+      "p_overtime": 0.7933333333333333,
+      "distance": 1386.0884585619458,
+      "n_routes": 16.0,
+      "duration_total_mean": 3039.359047326614
+     },
+     "runtime_s_mean": 2.8233303999998802,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "R1",
+     "method": "buffered",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9492866666666666,
+      "p_all_on_time": 0.438,
+      "violations_mean": 5.071333333333333,
+      "lateness_total_mean": 112.49617893552617,
+      "overtime_mean": 8.061538815444578,
+      "p_overtime": 0.3293333333333333,
+      "distance": 1937.9363211054504,
+      "n_routes": 25.0,
+      "duration_total_mean": 4442.660474421115
+     },
+     "runtime_s_mean": 6.398511400000037,
+     "target_attainment_rate": 0.6666666666666666,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 3,
+       "mean": 11.115333333333325,
+       "median": 13.139999999999985,
+       "ci95": [
+        4.231999999999991,
+        15.973999999999998
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 3,
+       "mean": -47.20628996456943,
+       "median": -93.79537090222249,
+       "ci95": [
+        -98.58493217487232,
+        50.761433183386536
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.3333333333333333
+      },
+      "distance_rel_pct": {
+       "n": 3,
+       "mean": 41.512731467874936,
+       "median": 43.03604081300414,
+       "ci95": [
+        26.45035583751452,
+        55.051797753106136
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 3,
+       "mean": 9.0,
+       "median": 10.0,
+       "ci95": [
+        5.0,
+        12.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 3,
+       "mean": 43.53333333333333,
+       "median": 47.199999999999996,
+       "ci95": [
+        0.0,
+        83.39999999999999
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "scope": "R1",
+     "method": "reliability",
+     "n_instances": 3,
+     "mean": {
+      "on_time_rate": 0.9254600000000001,
+      "p_all_on_time": 0.18866666666666668,
+      "violations_mean": 7.454000000000001,
+      "lateness_total_mean": 84.19590818658956,
+      "overtime_mean": 9.654974551047983,
+      "p_overtime": 0.39466666666666667,
+      "distance": 1582.35197325679,
+      "n_routes": 20.333333333333332,
+      "duration_total_mean": 3566.0791704306316
+     },
+     "runtime_s_mean": 5.003100166666627,
+     "target_attainment_rate": 0.6666666666666666,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 3,
+       "mean": 8.732666666666658,
+       "median": 10.83599999999999,
+       "ci95": [
+        -0.0380000000000158,
+        15.4
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.6666666666666666
+      },
+      "lateness_total_rel": {
+       "n": 3,
+       "mean": -60.522167201108545,
+       "median": -86.51917388941935,
+       "ci95": [
+        -92.0328244304272,
+        -3.014503283479081
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 3,
+       "mean": 15.227371407863345,
+       "median": 16.03205561072869,
+       "ci95": [
+        0.1261720187862858,
+        29.523886594075055
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 3,
+       "mean": 4.333333333333333,
+       "median": 4.0,
+       "ci95": [
+        0.0,
+        9.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.6666666666666666
+      },
+      "p_all_on_time_pt": {
+       "n": 3,
+       "mean": 18.599999999999998,
+       "median": 25.4,
+       "ci95": [
+        0.0,
+        30.399999999999995
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "scope": "R2",
+     "method": "deterministic",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.9755600000000001,
+      "p_all_on_time": 0.096,
+      "violations_mean": 2.444,
+      "lateness_total_mean": 26.66161403403819,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1037.2251897013998,
+      "n_routes": 7.0,
+      "duration_total_mean": 5498.746782141853
+     },
+     "runtime_s_mean": 3.238563200000499,
+     "target_attainment_rate": 1.0
+    },
+    {
+     "scope": "R2",
+     "method": "buffered",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.9993000000000001,
+      "p_all_on_time": 0.936,
+      "violations_mean": 0.07,
+      "lateness_total_mean": 0.4606758474079986,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1116.8778146084683,
+      "n_routes": 8.0,
+      "duration_total_mean": 6432.531548440665
+     },
+     "runtime_s_mean": 3.499250500000926,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 1,
+       "mean": 2.3739999999999983,
+       "median": 2.3739999999999983,
+       "ci95": [
+        2.3739999999999983,
+        2.3739999999999983
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 1,
+       "mean": -98.27213818780865,
+       "median": -98.27213818780865,
+       "ci95": [
+        -98.27213818780865,
+        -98.27213818780865
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 1,
+       "mean": 7.679395535119915,
+       "median": 7.679395535119915,
+       "ci95": [
+        7.679395535119915,
+        7.679395535119915
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 1,
+       "mean": 1.0,
+       "median": 1.0,
+       "ci95": [
+        1.0,
+        1.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 1,
+       "mean": 84.00000000000001,
+       "median": 84.00000000000001,
+       "ci95": [
+        84.00000000000001,
+        84.00000000000001
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "R2",
+     "method": "reliability",
+     "n_instances": 1,
+     "mean": {
+      "on_time_rate": 0.97436,
+      "p_all_on_time": 0.084,
+      "violations_mean": 2.564,
+      "lateness_total_mean": 28.68740961607499,
+      "overtime_mean": 0.0,
+      "p_overtime": 0.0,
+      "distance": 1039.2557818243276,
+      "n_routes": 7.0,
+      "duration_total_mean": 5512.850884111874
+     },
+     "runtime_s_mean": 3.797198700000081,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 1,
+       "mean": -0.12000000000000899,
+       "median": -0.12000000000000899,
+       "ci95": [
+        -0.12000000000000899,
+        -0.12000000000000899
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "lateness_total_rel": {
+       "n": 1,
+       "mean": 7.598173086785065,
+       "median": 7.598173086785065,
+       "ci95": [
+        7.598173086785065,
+        7.598173086785065
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "distance_rel_pct": {
+       "n": 1,
+       "mean": 0.19577157815771074,
+       "median": 0.19577157815771074,
+       "ci95": [
+        0.19577157815771074,
+        0.19577157815771074
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 1,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 1,
+       "mean": -1.1999999999999997,
+       "median": -1.1999999999999997,
+       "ci95": [
+        -1.1999999999999997,
+        -1.1999999999999997
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      }
+     }
+    },
+    {
+     "scope": "RC1",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.83965,
+      "p_all_on_time": 0.002,
+      "violations_mean": 16.035,
+      "lateness_total_mean": 251.6617639860729,
+      "overtime_mean": 58.040629908704034,
+      "p_overtime": 0.851,
+      "distance": 1593.8709096551383,
+      "n_routes": 16.0,
+      "duration_total_mean": 3234.710678142904
+     },
+     "runtime_s_mean": 2.7278905499997563,
+     "target_attainment_rate": 0.0
+    },
+    {
+     "scope": "RC1",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9460799999999999,
+      "p_all_on_time": 0.0,
+      "violations_mean": 5.3919999999999995,
+      "lateness_total_mean": 135.5544697954016,
+      "overtime_mean": 50.22688351612517,
+      "p_overtime": 0.87,
+      "distance": 2236.9742126698284,
+      "n_routes": 25.0,
+      "duration_total_mean": 4748.41008218457
+     },
+     "runtime_s_mean": 6.457659349999631,
+     "target_attainment_rate": 0.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 10.642999999999992,
+       "median": 10.642999999999992,
+       "ci95": [
+        8.491999999999978,
+        12.794000000000006
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -44.12046726267585,
+       "median": -44.12046726267585,
+       "ci95": [
+        -59.51961230590081,
+        -28.721322219450897
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 40.413458056085574,
+       "median": 40.413458056085574,
+       "ci95": [
+        38.06792140313435,
+        42.75899470903679
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 9.0,
+       "median": 9.0,
+       "ci95": [
+        9.0,
+        9.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": -0.2,
+       "median": -0.2,
+       "ci95": [
+        -0.4,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      }
+     }
+    },
+    {
+     "scope": "RC1",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.91828,
+      "p_all_on_time": 0.154,
+      "violations_mean": 8.172,
+      "lateness_total_mean": 129.47249198027646,
+      "overtime_mean": 42.63245946998438,
+      "p_overtime": 0.706,
+      "distance": 1932.278010873263,
+      "n_routes": 20.5,
+      "duration_total_mean": 3954.6931583493015
+     },
+     "runtime_s_mean": 4.678093999999874,
+     "target_attainment_rate": 0.5,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 7.862999999999998,
+       "median": 7.862999999999998,
+       "ci95": [
+        0.0,
+        15.725999999999996
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -42.93296042368869,
+       "median": -42.93296042368869,
+       "ci95": [
+        -85.86592084737738,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 20.65978250347055,
+       "median": 20.65978250347055,
+       "ci95": [
+        0.0,
+        41.3195650069411
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 4.5,
+       "median": 4.5,
+       "ci95": [
+        0.0,
+        9.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 15.2,
+       "median": 15.2,
+       "ci95": [
+        0.0,
+        30.4
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      }
+     }
+    },
+    {
+     "scope": "RC2",
+     "method": "deterministic",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9757100000000001,
+      "p_all_on_time": 0.159,
+      "violations_mean": 2.4290000000000003,
+      "lateness_total_mean": 31.704432778908966,
+      "overtime_mean": 0.8378143256487925,
+      "p_overtime": 0.046,
+      "distance": 1082.1393479274573,
+      "n_routes": 6.5,
+      "duration_total_mean": 4681.0292916546605
+     },
+     "runtime_s_mean": 2.7879441499999302,
+     "target_attainment_rate": 1.0
+    },
+    {
+     "scope": "RC2",
+     "method": "buffered",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.99962,
+      "p_all_on_time": 0.9630000000000001,
+      "violations_mean": 0.038000000000000006,
+      "lateness_total_mean": 0.3160328020741987,
+      "overtime_mean": 0.10596869829962918,
+      "p_overtime": 0.003,
+      "distance": 1141.0161770622603,
+      "n_routes": 9.0,
+      "duration_total_mean": 6347.178026536536
+     },
+     "runtime_s_mean": 2.801953950001007,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 2.3909999999999987,
+       "median": 2.3909999999999987,
+       "ci95": [
+        2.3779999999999912,
+        2.404000000000006
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": -99.03375395750314,
+       "median": -99.03375395750314,
+       "ci95": [
+        -99.85753931551127,
+        -98.209968599495
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 5.425121321165916,
+       "median": 5.425121321165916,
+       "ci95": [
+        4.409163094123847,
+        6.441079548207984
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 2.5,
+       "median": 2.5,
+       "ci95": [
+        2.0,
+        3.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": 80.4,
+       "median": 80.4,
+       "ci95": [
+        74.8,
+        86.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 1.0
+      }
+     }
+    },
+    {
+     "scope": "RC2",
+     "method": "reliability",
+     "n_instances": 2,
+     "mean": {
+      "on_time_rate": 0.9764300000000001,
+      "p_all_on_time": 0.157,
+      "violations_mean": 2.357,
+      "lateness_total_mean": 32.70449465881001,
+      "overtime_mean": 0.8280198546670975,
+      "p_overtime": 0.044,
+      "distance": 1083.8773065953806,
+      "n_routes": 6.5,
+      "duration_total_mean": 4672.403486146157
+     },
+     "runtime_s_mean": 2.906346499999927,
+     "target_attainment_rate": 1.0,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 2,
+       "mean": 0.07200000000000539,
+       "median": 0.07200000000000539,
+       "ci95": [
+        0.0,
+        0.14400000000001079
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "lateness_total_rel": {
+       "n": 2,
+       "mean": 3.041485327500448,
+       "median": 3.041485327500448,
+       "ci95": [
+        0.0,
+        6.082970655000896
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "distance_rel_pct": {
+       "n": 2,
+       "mean": 0.1631181742000165,
+       "median": 0.1631181742000165,
+       "ci95": [
+        0.0,
+        0.326236348400033
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.5
+      },
+      "vehicles_delta": {
+       "n": 2,
+       "mean": 0.0,
+       "median": 0.0,
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      },
+      "p_all_on_time_pt": {
+       "n": 2,
+       "mean": -0.20000000000000018,
+       "median": -0.20000000000000018,
+       "ci95": [
+        -0.40000000000000036,
+        0.0
+       ],
+       "wilcoxon_p": null,
+       "share_positive": 0.0
+      }
+     }
+    }
+   ],
+   "overall": [
+    {
+     "scope": "overall",
+     "method": "deterministic",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.8339133333333334,
+      "p_all_on_time": 0.04533333333333334,
+      "violations_mean": 16.608666666666668,
+      "lateness_total_mean": 1214.3001509507885,
+      "overtime_mean": 93.40590652087859,
+      "p_overtime": 0.621,
+      "distance": 1115.4528516560126,
+      "n_routes": 10.5,
+      "duration_total_mean": 5935.625500317935
+     },
+     "runtime_s_mean": 2.5496612250000603,
+     "target_attainment_rate": 0.25
+    },
+    {
+     "scope": "overall",
+     "method": "buffered",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9757633333333331,
+      "p_all_on_time": 0.5433333333333333,
+      "violations_mean": 2.423666666666667,
+      "lateness_total_mean": 60.99301897992748,
+      "overtime_mean": 11.340440440786749,
+      "p_overtime": 0.25199999999999995,
+      "distance": 1585.0667011375683,
+      "n_routes": 17.416666666666668,
+      "duration_total_mean": 9750.95243620065
+     },
+     "runtime_s_mean": 4.524786650000048,
+     "target_attainment_rate": 0.75,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 12,
+       "mean": 14.184999999999997,
+       "median": 12.966999999999995,
+       "ci95": [
+        8.188062499999992,
+        20.944354166666663
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "lateness_total_rel": {
+       "n": 12,
+       "mean": -76.86978415845758,
+       "median": -98.24105339365182,
+       "ci95": [
+        -98.00922898312174,
+        -49.15751499177722
+       ],
+       "wilcoxon_p": 0.00146484375,
+       "share_positive": 0.08333333333333333
+      },
+      "distance_rel_pct": {
+       "n": 12,
+       "mean": 46.5580981019109,
+       "median": 42.89751776102047,
+       "ci95": [
+        27.934227565606335,
+        68.55455373539071
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "vehicles_delta": {
+       "n": 12,
+       "mean": 6.916666666666667,
+       "median": 7.0,
+       "ci95": [
+        4.5,
+        9.416666666666666
+       ],
+       "wilcoxon_p": 0.00048828125,
+       "share_positive": 1.0
+      },
+      "p_all_on_time_pt": {
+       "n": 12,
+       "mean": 49.79999999999999,
+       "median": 60.5,
+       "ci95": [
+        29.515833333333337,
+        69.01708333333333
+       ],
+       "wilcoxon_p": 0.00390625,
+       "share_positive": 0.75
+      }
+     }
+    },
+    {
+     "scope": "overall",
+     "method": "reliability",
+     "n_instances": 12,
+     "mean": {
+      "on_time_rate": 0.9527783333333334,
+      "p_all_on_time": 0.18883333333333333,
+      "violations_mean": 4.722166666666667,
+      "lateness_total_mean": 97.76232483318582,
+      "overtime_mean": 13.30907988811883,
+      "p_overtime": 0.2803333333333333,
+      "distance": 1359.4648702375573,
+      "n_routes": 14.416666666666666,
+      "duration_total_mean": 8401.165154461425
+     },
+     "runtime_s_mean": 3.959370224999778,
+     "target_attainment_rate": 0.8333333333333334,
+     "paired_vs_baseline": {
+      "on_time_rate_pt": {
+       "n": 12,
+       "mean": 11.886499999999998,
+       "median": 11.64599999999999,
+       "ci95": [
+        5.5355875000000045,
+        18.99578749999999
+       ],
+       "wilcoxon_p": 0.013671875,
+       "share_positive": 0.6666666666666666
+      },
+      "lateness_total_rel": {
+       "n": 12,
+       "mean": -53.06573030603189,
+       "median": -86.19254736839837,
+       "ci95": [
+        -77.77832586555012,
+        -27.950543277004293
+       ],
+       "wilcoxon_p": 0.0234375,
+       "share_positive": 0.16666666666666666
+      },
+      "distance_rel_pct": {
+       "n": 12,
+       "mean": 25.394191419304374,
+       "median": 19.29903526092631,
+       "ci95": [
+        11.043974804398314,
+        41.87204635312714
+       ],
+       "wilcoxon_p": 0.001953125,
+       "share_positive": 0.8333333333333334
+      },
+      "vehicles_delta": {
+       "n": 12,
+       "mean": 3.9166666666666665,
+       "median": 2.5,
+       "ci95": [
+        1.75,
+        6.252083333333303
+       ],
+       "wilcoxon_p": 0.015625,
+       "share_positive": 0.5833333333333334
+      },
+      "p_all_on_time_pt": {
+       "n": 12,
+       "mean": 14.35,
+       "median": 7.4,
+       "ci95": [
+        5.349166666666671,
+        24.633749999999996
+       ],
+       "wilcoxon_p": 0.03125,
+       "share_positive": 0.5833333333333334
+      }
+     }
+    }
+   ],
+   "failures": []
+  }
+ },
+ "n_runs": 108,
+ "n_failed": 0,
+ "rows": [
+  {
+   "instance_id": "solomon/R105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.94648,
+   "p_all_on_time": 0.022,
+   "violations_mean": 5.352,
+   "lateness_total_mean": 18.585591431898617,
+   "overtime_mean": 4.766811277248849,
+   "p_overtime": 0.556,
+   "distance": 1360.7831983364536,
+   "n_routes": 15,
+   "duration_total_mean": 2773.908905484496,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.861352899999474,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.93802,
+   "p_all_on_time": 0.012,
+   "violations_mean": 6.198,
+   "lateness_total_mean": 17.841987158664153,
+   "overtime_mean": 0.030595917868261154,
+   "p_overtime": 0.022,
+   "distance": 1643.7907460160045,
+   "n_routes": 20,
+   "duration_total_mean": 3738.4180195482277,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.998474600000918,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.87678,
+   "p_all_on_time": 0.0,
+   "violations_mean": 12.322,
+   "lateness_total_mean": 78.90876323600791,
+   "overtime_mean": 3.4999518172302677,
+   "p_overtime": 0.392,
+   "distance": 1643.7907460160045,
+   "n_routes": 20,
+   "duration_total_mean": 3762.145920627299,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.9779326999996556,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.8197000000000001,
+   "p_all_on_time": 0.0,
+   "violations_mean": 18.03,
+   "lateness_total_mean": 212.14628721130254,
+   "overtime_mean": 20.984062336193563,
+   "p_overtime": 0.698,
+   "distance": 1643.7907460160045,
+   "n_routes": 20,
+   "duration_total_mean": 3803.637743465301,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.947831800000131,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9843400000000001,
+   "p_all_on_time": 0.264,
+   "violations_mean": 1.566,
+   "lateness_total_mean": 3.0362066842378272,
+   "overtime_mean": 0.02074353553837585,
+   "p_overtime": 0.01,
+   "distance": 1758.7520015834134,
+   "n_routes": 23,
+   "duration_total_mean": 4089.91351804474,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 4.819060200001331,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9996200000000001,
+   "p_all_on_time": 0.966,
+   "violations_mean": 0.038,
+   "lateness_total_mean": 0.06579244089755351,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1517.5929380332027,
+   "n_routes": 19,
+   "duration_total_mean": 3370.7869597382687,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.8463104000002204,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9947,
+   "p_all_on_time": 0.586,
+   "violations_mean": 0.53,
+   "lateness_total_mean": 1.2190212286795818,
+   "overtime_mean": 0.005899439595462752,
+   "p_overtime": 0.014,
+   "distance": 2010.4076149146945,
+   "n_routes": 25,
+   "duration_total_mean": 4513.920500063962,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 6.026927299999443,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.8865400000000001,
+   "p_all_on_time": 0.002,
+   "violations_mean": 11.346,
+   "lateness_total_mean": 87.7132565773466,
+   "overtime_mean": 20.424210130766745,
+   "p_overtime": 0.786,
+   "distance": 1360.7831983364536,
+   "n_routes": 15,
+   "duration_total_mean": 2800.8338021266813,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.9626464000011765,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.96608,
+   "p_all_on_time": 0.09,
+   "violations_mean": 3.392,
+   "lateness_total_mean": 19.675989338039717,
+   "overtime_mean": 1.9427322131599882,
+   "p_overtime": 0.294,
+   "distance": 1904.376714790788,
+   "n_routes": 25,
+   "duration_total_mean": 4452.293554700007,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 6.106873699998687,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.99222,
+   "p_all_on_time": 0.5,
+   "violations_mean": 0.778,
+   "lateness_total_mean": 1.6060841610146626,
+   "overtime_mean": 0.07688230049623786,
+   "p_overtime": 0.026,
+   "distance": 1429.3517774908003,
+   "n_routes": 17,
+   "duration_total_mean": 3085.171658334361,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.087782500000685,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.8193199999999999,
+   "p_all_on_time": 0.0,
+   "violations_mean": 18.068,
+   "lateness_total_mean": 205.75113041753886,
+   "overtime_mean": 19.948265633993657,
+   "p_overtime": 0.692,
+   "distance": 1645.864749984875,
+   "n_routes": 20,
+   "duration_total_mean": 3722.762695466281,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": false,
+   "runtime_s": 6.276244900000165,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.99792,
+   "p_all_on_time": 0.842,
+   "violations_mean": 0.208,
+   "lateness_total_mean": 0.9782754640025232,
+   "overtime_mean": 0.19093140963795133,
+   "p_overtime": 0.028,
+   "distance": 1772.215527724084,
+   "n_routes": 24,
+   "duration_total_mean": 4061.925746684756,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.7774527999990823,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.95204,
+   "p_all_on_time": 0.0,
+   "violations_mean": 4.796,
+   "lateness_total_mean": 48.746227931016215,
+   "overtime_mean": 1.7866165858181764,
+   "p_overtime": 0.276,
+   "distance": 2058.9232147706075,
+   "n_routes": 25,
+   "duration_total_mean": 4635.546529963391,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 8.412777100000312,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.86202,
+   "p_all_on_time": 0.0,
+   "violations_mean": 13.798,
+   "lateness_total_mean": 319.83478304510317,
+   "overtime_mean": 18.34995714365338,
+   "p_overtime": 0.654,
+   "distance": 2078.579247561372,
+   "n_routes": 25,
+   "duration_total_mean": 4868.98263074392,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 8.47710300000108,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9701600000000001,
+   "p_all_on_time": 0.136,
+   "violations_mean": 2.984,
+   "lateness_total_mean": 13.971380925765272,
+   "overtime_mean": 2.240427559167014,
+   "p_overtime": 0.242,
+   "distance": 1462.6719020126825,
+   "n_routes": 18,
+   "duration_total_mean": 3156.803485882407,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.615868099999716,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.82826,
+   "p_all_on_time": 0.0,
+   "violations_mean": 17.174,
+   "lateness_total_mean": 237.2689990312028,
+   "overtime_mean": 50.71794555141151,
+   "p_overtime": 0.85,
+   "distance": 1360.7831983364536,
+   "n_routes": 15,
+   "duration_total_mean": 2845.6445617968684,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.4541681999999128,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9405,
+   "p_all_on_time": 0.016,
+   "violations_mean": 5.95,
+   "lateness_total_mean": 26.14549998859239,
+   "overtime_mean": 5.696339082452528,
+   "p_overtime": 0.648,
+   "distance": 1153.6914313333793,
+   "n_routes": 13,
+   "duration_total_mean": 2419.58981189456,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.1519329999991896,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.99324,
+   "p_all_on_time": 0.524,
+   "violations_mean": 0.676,
+   "lateness_total_mean": 1.5725894082340692,
+   "overtime_mean": 0.10243408860287263,
+   "p_overtime": 0.03,
+   "distance": 1227.9753618225336,
+   "n_routes": 14,
+   "duration_total_mean": 2539.57284609536,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.083200700000816,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9999600000000001,
+   "p_all_on_time": 0.996,
+   "violations_mean": 0.004,
+   "lateness_total_mean": 0.00538910218050475,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1307.6354770810767,
+   "n_routes": 16,
+   "duration_total_mean": 2697.9359851776085,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.313097199999902,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.90482,
+   "p_all_on_time": 0.01,
+   "violations_mean": 9.518,
+   "lateness_total_mean": 86.44123959091522,
+   "overtime_mean": 18.422194563514772,
+   "p_overtime": 0.772,
+   "distance": 1153.6914313333793,
+   "n_routes": 13,
+   "duration_total_mean": 2437.7466071614213,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.8776759000011225,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.98226,
+   "p_all_on_time": 0.304,
+   "violations_mean": 1.774,
+   "lateness_total_mean": 18.903637724983927,
+   "overtime_mean": 3.522504443190147,
+   "p_overtime": 0.224,
+   "distance": 1762.5392866045354,
+   "n_routes": 24,
+   "duration_total_mean": 4093.3740069097917,
+   "status": "ok",
+   "beta": 1.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 5.0939380999989226,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9994400000000001,
+   "p_all_on_time": 0.952,
+   "violations_mean": 0.056,
+   "lateness_total_mean": 0.24339545182360725,
+   "overtime_mean": 0.02800341539076976,
+   "p_overtime": 0.002,
+   "distance": 1489.922407461303,
+   "n_routes": 20,
+   "duration_total_mean": 3264.0185601895046,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.826213700000153,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.988,
+   "p_all_on_time": 0.43,
+   "violations_mean": 1.2,
+   "lateness_total_mean": 6.952148015108567,
+   "overtime_mean": 0.9093417032934208,
+   "p_overtime": 0.12,
+   "distance": 1275.5444658784709,
+   "n_routes": 15,
+   "duration_total_mean": 2687.991809651223,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.027130799999213,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.8664400000000001,
+   "p_all_on_time": 0.008,
+   "violations_mean": 13.356,
+   "lateness_total_mean": 207.2050791851865,
+   "overtime_mean": 46.843933521761834,
+   "p_overtime": 0.832,
+   "distance": 1153.6914313333793,
+   "n_routes": 13,
+   "duration_total_mean": 2468.7948367176728,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.0679911999995966,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.988,
+   "p_all_on_time": 0.472,
+   "violations_mean": 1.2,
+   "lateness_total_mean": 14.721661353895467,
+   "overtime_mean": 4.173043632264434,
+   "p_overtime": 0.248,
+   "distance": 1946.4104109490327,
+   "n_routes": 25,
+   "duration_total_mean": 4472.579192179324,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 6.056750499999907,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.9935,
+   "p_all_on_time": 0.474,
+   "violations_mean": 0.65,
+   "lateness_total_mean": 1.698350000577118,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1037.2251897013998,
+   "n_routes": 7,
+   "duration_total_mean": 5496.816548079269,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.2289227999990544,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 1.0,
+   "p_all_on_time": 1.0,
+   "violations_mean": 0.0,
+   "lateness_total_mean": 0.0,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1064.3854294829807,
+   "n_routes": 7,
+   "duration_total_mean": 5575.017585721884,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.1334286000001157,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.9748,
+   "p_all_on_time": 0.262,
+   "violations_mean": 2.52,
+   "lateness_total_mean": 27.932956417245922,
+   "overtime_mean": 5.4941535759601425,
+   "p_overtime": 0.268,
+   "distance": 1338.6518831809585,
+   "n_routes": 17,
+   "duration_total_mean": 2882.100808915822,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.6391175000007934,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R109",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R1",
+   "n_clients": 100,
+   "on_time_rate": 0.99784,
+   "p_all_on_time": 0.842,
+   "violations_mean": 0.216,
+   "lateness_total_mean": 2.932092407579905,
+   "overtime_mean": 1.6616156704159206,
+   "p_overtime": 0.086,
+   "distance": 1788.8193048059466,
+   "n_routes": 25,
+   "duration_total_mean": 3986.419600340102,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 4.661680699999124,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.99334,
+   "p_all_on_time": 0.484,
+   "violations_mean": 0.666,
+   "lateness_total_mean": 1.8914553829680667,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1039.2557818243276,
+   "n_routes": 7,
+   "duration_total_mean": 5511.1315611323025,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.8348294000006717,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.7935,
+   "p_all_on_time": 0.0,
+   "violations_mean": 20.65,
+   "lateness_total_mean": 571.503020131355,
+   "overtime_mean": 31.638130194330117,
+   "p_overtime": 0.618,
+   "distance": 828.9368669428338,
+   "n_routes": 10,
+   "duration_total_mean": 9973.684410526557,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.7372525999999198,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.9861800000000001,
+   "p_all_on_time": 0.24,
+   "violations_mean": 1.382,
+   "lateness_total_mean": 8.361105407294712,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1037.2251897013998,
+   "n_routes": 7,
+   "duration_total_mean": 5498.308556557078,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.389523999998346,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.9998,
+   "p_all_on_time": 0.98,
+   "violations_mean": 0.02,
+   "lateness_total_mean": 0.10046164033448712,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1098.7771935457426,
+   "n_routes": 9,
+   "duration_total_mean": 6744.19224893681,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.5250140000007377,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.9755600000000001,
+   "p_all_on_time": 0.096,
+   "violations_mean": 2.444,
+   "lateness_total_mean": 26.66161403403819,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1037.2251897013998,
+   "n_routes": 7,
+   "duration_total_mean": 5498.746782141853,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.238563200000499,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.9843800000000001,
+   "p_all_on_time": 0.226,
+   "violations_mean": 1.562,
+   "lateness_total_mean": 10.20484850729557,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1039.2557818243276,
+   "n_routes": 7,
+   "duration_total_mean": 5512.228623558824,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.8685169000000315,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.9993000000000001,
+   "p_all_on_time": 0.936,
+   "violations_mean": 0.07,
+   "lateness_total_mean": 0.4606758474079986,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1116.8778146084683,
+   "n_routes": 8,
+   "duration_total_mean": 6432.531548440665,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.499250500000926,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9976400000000001,
+   "p_all_on_time": 0.798,
+   "violations_mean": 0.236,
+   "lateness_total_mean": 2.2774749227765607,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1456.5798712222756,
+   "n_routes": 20,
+   "duration_total_mean": 16999.11525548797,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.7545595000010508,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.65754,
+   "p_all_on_time": 0.0,
+   "violations_mean": 34.246,
+   "lateness_total_mean": 2046.4248118848664,
+   "overtime_mean": 93.8364481206522,
+   "p_overtime": 0.808,
+   "distance": 828.9368669428338,
+   "n_routes": 10,
+   "duration_total_mean": 10267.091960887528,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.981297700000141,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9582,
+   "p_all_on_time": 0.062,
+   "violations_mean": 4.18,
+   "lateness_total_mean": 70.86298052409276,
+   "overtime_mean": 0.1770784718892287,
+   "p_overtime": 0.012,
+   "distance": 1163.6814239267655,
+   "n_routes": 14,
+   "duration_total_mean": 13050.614267800811,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.790081099999952,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/R202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "R2",
+   "n_clients": 100,
+   "on_time_rate": 0.97436,
+   "p_all_on_time": 0.084,
+   "violations_mean": 2.564,
+   "lateness_total_mean": 28.68740961607499,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1039.2557818243276,
+   "n_routes": 7,
+   "duration_total_mean": 5512.850884111874,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.797198700000081,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.59246,
+   "p_all_on_time": 0.0,
+   "violations_mean": 40.754,
+   "lateness_total_mean": 3920.543684392198,
+   "overtime_mean": 220.30979456725504,
+   "p_overtime": 0.92,
+   "distance": 828.9368669428338,
+   "n_routes": 10,
+   "duration_total_mean": 10572.763978691,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.029375100000834,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.99026,
+   "p_all_on_time": 0.396,
+   "violations_mean": 0.974,
+   "lateness_total_mean": 23.812679544890138,
+   "overtime_mean": 0.7489754366456627,
+   "p_overtime": 0.044,
+   "distance": 1510.6214879466077,
+   "n_routes": 20,
+   "duration_total_mean": 17727.38940989803,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6046181000001525,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9781000000000002,
+   "p_all_on_time": 0.104,
+   "violations_mean": 2.19,
+   "lateness_total_mean": 55.07677701676076,
+   "overtime_mean": 1.2494805840192098,
+   "p_overtime": 0.062,
+   "distance": 1482.6275486338886,
+   "n_routes": 20,
+   "duration_total_mean": 17870.989916272916,
+   "status": "ok",
+   "beta": 1.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.7047901999994792,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9247799999999999,
+   "p_all_on_time": 0.06,
+   "violations_mean": 7.522,
+   "lateness_total_mean": 201.09538445529464,
+   "overtime_mean": 29.07068774206104,
+   "p_overtime": 0.546,
+   "distance": 828.9368669428338,
+   "n_routes": 10,
+   "duration_total_mean": 9887.496412560602,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.30134900000121,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.7992400000000001,
+   "p_all_on_time": 0.002,
+   "violations_mean": 20.076,
+   "lateness_total_mean": 1160.4804774511272,
+   "overtime_mean": 82.72688044655919,
+   "p_overtime": 0.74,
+   "distance": 828.9368669428338,
+   "n_routes": 10,
+   "duration_total_mean": 10109.584986779675,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.3329312999994727,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.99946,
+   "p_all_on_time": 0.948,
+   "violations_mean": 0.054,
+   "lateness_total_mean": 0.4886191199444965,
+   "overtime_mean": 0.11608118617445644,
+   "p_overtime": 0.004,
+   "distance": 1285.2565461665492,
+   "n_routes": 16,
+   "duration_total_mean": 14310.400597363117,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6236539000001358,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9905799999999999,
+   "p_all_on_time": 0.582,
+   "violations_mean": 0.942,
+   "lateness_total_mean": 16.327794456777454,
+   "overtime_mean": 0.11773017001280005,
+   "p_overtime": 0.004,
+   "distance": 1087.705938486043,
+   "n_routes": 13,
+   "duration_total_mean": 11444.968797666761,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.7963051999995514,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.7190599999999999,
+   "p_all_on_time": 0.0,
+   "violations_mean": 28.094,
+   "lateness_total_mean": 2653.6534949543143,
+   "overtime_mean": 198.01199219043448,
+   "p_overtime": 0.874,
+   "distance": 828.9368669428338,
+   "n_routes": 10,
+   "duration_total_mean": 10384.131676828247,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.9247357999993255,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.99622,
+   "p_all_on_time": 0.694,
+   "violations_mean": 0.378,
+   "lateness_total_mean": 8.821372099651228,
+   "overtime_mean": 0.39562540881813996,
+   "p_overtime": 0.018,
+   "distance": 1462.4123840295913,
+   "n_routes": 20,
+   "duration_total_mean": 16697.23153806917,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6455828999987716,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.98724,
+   "p_all_on_time": 0.314,
+   "violations_mean": 1.276,
+   "lateness_total_mean": 50.6211376118015,
+   "overtime_mean": 7.505856273660131,
+   "p_overtime": 0.186,
+   "distance": 1953.6483520431252,
+   "n_routes": 25,
+   "duration_total_mean": 21708.593104365715,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 4.7375388000000385,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9564199999999999,
+   "p_all_on_time": 0.02,
+   "violations_mean": 4.358,
+   "lateness_total_mean": 195.81376077679587,
+   "overtime_mean": 15.60827117666886,
+   "p_overtime": 0.284,
+   "distance": 1502.0808582789466,
+   "n_routes": 20,
+   "duration_total_mean": 17707.876571527973,
+   "status": "ok",
+   "beta": 1.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 4.242961399999331,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9534600000000001,
+   "p_all_on_time": 0.052,
+   "violations_mean": 4.654,
+   "lateness_total_mean": 179.35307832725186,
+   "overtime_mean": 7.108738347731202,
+   "p_overtime": 0.146,
+   "distance": 1168.8362999632618,
+   "n_routes": 14,
+   "duration_total_mean": 12932.280687820117,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.7756783999993786,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.98694,
+   "p_all_on_time": 0.308,
+   "violations_mean": 1.306,
+   "lateness_total_mean": 56.544934843712845,
+   "overtime_mean": 2.5880084086323887,
+   "p_overtime": 0.074,
+   "distance": 1510.3910810286945,
+   "n_routes": 20,
+   "duration_total_mean": 17681.031426865255,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.368731700000353,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.8961,
+   "p_all_on_time": 0.184,
+   "violations_mean": 10.39,
+   "lateness_total_mean": 514.6524215033556,
+   "overtime_mean": 41.27209702195193,
+   "p_overtime": 0.522,
+   "distance": 591.5565566715014,
+   "n_routes": 3,
+   "duration_total_mean": 9649.957713980453,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.0491146000003937,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 1.0,
+   "p_all_on_time": 1.0,
+   "violations_mean": 0.0,
+   "lateness_total_mean": 0.0,
+   "overtime_mean": 0.015830820158090318,
+   "p_overtime": 0.002,
+   "distance": 814.2716727291761,
+   "n_routes": 6,
+   "duration_total_mean": 17542.473530506155,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.715348499999891,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C1",
+   "n_clients": 100,
+   "on_time_rate": 0.9742000000000001,
+   "p_all_on_time": 0.128,
+   "violations_mean": 2.58,
+   "lateness_total_mean": 121.47203202544715,
+   "overtime_mean": 3.4917313955891967,
+   "p_overtime": 0.084,
+   "distance": 1457.703191610271,
+   "n_routes": 20,
+   "duration_total_mean": 17053.590471092746,
+   "status": "ok",
+   "beta": 1.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.247058699998888,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.78556,
+   "p_all_on_time": 0.016,
+   "violations_mean": 21.444,
+   "lateness_total_mean": 2242.9584651449427,
+   "overtime_mean": 116.39898652927342,
+   "p_overtime": 0.666,
+   "distance": 591.5565566715014,
+   "n_routes": 3,
+   "duration_total_mean": 9819.70409600138,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.9588296999991144,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.9956600000000001,
+   "p_all_on_time": 0.832,
+   "violations_mean": 0.434,
+   "lateness_total_mean": 9.250948856822545,
+   "overtime_mean": 0.33480328916034613,
+   "p_overtime": 0.016,
+   "distance": 680.4716230020313,
+   "n_routes": 4,
+   "duration_total_mean": 10920.860225382203,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.75734089999969,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.70908,
+   "p_all_on_time": 0.002,
+   "violations_mean": 29.092,
+   "lateness_total_mean": 4710.417657447906,
+   "overtime_mean": 253.18346049661284,
+   "p_overtime": 0.804,
+   "distance": 591.5565566715014,
+   "n_routes": 3,
+   "duration_total_mean": 10015.08059641993,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.9732865000005404,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.99948,
+   "p_all_on_time": 0.952,
+   "violations_mean": 0.052,
+   "lateness_total_mean": 1.489236163293449,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 886.5416014017558,
+   "n_routes": 6,
+   "duration_total_mean": 18023.45527773181,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.075420299999678,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.98334,
+   "p_all_on_time": 0.236,
+   "violations_mean": 1.666,
+   "lateness_total_mean": 110.98728202707134,
+   "overtime_mean": 38.38634902247609,
+   "p_overtime": 0.462,
+   "distance": 588.4928487625536,
+   "n_routes": 3,
+   "duration_total_mean": 9593.241828461601,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.9859806000004028,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.9854,
+   "p_all_on_time": 0.48,
+   "violations_mean": 1.46,
+   "lateness_total_mean": 64.18685870393661,
+   "overtime_mean": 2.3969487054087284,
+   "p_overtime": 0.066,
+   "distance": 755.6819661093357,
+   "n_routes": 6,
+   "duration_total_mean": 17907.345246168465,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.087232900001254,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.9723200000000001,
+   "p_all_on_time": 0.192,
+   "violations_mean": 2.768,
+   "lateness_total_mean": 175.65043920318277,
+   "overtime_mean": 14.06545375485053,
+   "p_overtime": 0.212,
+   "distance": 813.8798236642733,
+   "n_routes": 6,
+   "duration_total_mean": 17709.077002832793,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.1634498000003077,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.9966200000000002,
+   "p_all_on_time": 0.74,
+   "violations_mean": 0.338,
+   "lateness_total_mean": 14.33082476597562,
+   "overtime_mean": 1.0125741706416793,
+   "p_overtime": 0.028,
+   "distance": 981.4534966687744,
+   "n_routes": 7,
+   "duration_total_mean": 18409.166357821563,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.3235489999988204,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.93288,
+   "p_all_on_time": 0.16,
+   "violations_mean": 6.712,
+   "lateness_total_mean": 687.0690465877054,
+   "overtime_mean": 100.05474614166992,
+   "p_overtime": 0.57,
+   "distance": 588.4928487625536,
+   "n_routes": 3,
+   "duration_total_mean": 9672.342096699838,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.851451000000452,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.98334,
+   "p_all_on_time": 0.236,
+   "violations_mean": 1.666,
+   "lateness_total_mean": 110.98728202707134,
+   "overtime_mean": 38.38634902247609,
+   "p_overtime": 0.462,
+   "distance": 588.4928487625536,
+   "n_routes": 3,
+   "duration_total_mean": 9593.241828461601,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.4959435000000667,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 1.0,
+   "p_all_on_time": 1.0,
+   "violations_mean": 0.0,
+   "lateness_total_mean": 0.0,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 726.9056692694994,
+   "n_routes": 6,
+   "duration_total_mean": 17246.262384929167,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6454671999999846,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.99982,
+   "p_all_on_time": 0.982,
+   "violations_mean": 0.018,
+   "lateness_total_mean": 0.543417709804853,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 806.1035376176245,
+   "n_routes": 6,
+   "duration_total_mean": 17101.06843874497,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.7009219999999914,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.8656800000000001,
+   "p_all_on_time": 0.116,
+   "violations_mean": 13.432,
+   "lateness_total_mean": 2036.9726016233503,
+   "overtime_mean": 213.06280111816818,
+   "p_overtime": 0.68,
+   "distance": 588.4928487625536,
+   "n_routes": 3,
+   "duration_total_mean": 9807.225888159212,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 1.9283135000005132,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.99814,
+   "p_all_on_time": 0.934,
+   "violations_mean": 0.186,
+   "lateness_total_mean": 12.91655671685066,
+   "overtime_mean": 1.8063496607851612,
+   "p_overtime": 0.03,
+   "distance": 695.0192293061546,
+   "n_routes": 6,
+   "duration_total_mean": 15382.596664320237,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.6119356999988668,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.9997999999999999,
+   "p_all_on_time": 0.982,
+   "violations_mean": 0.02,
+   "lateness_total_mean": 0.7291126887016623,
+   "overtime_mean": 0.12852556132344217,
+   "p_overtime": 0.002,
+   "distance": 888.63992652123,
+   "n_routes": 6,
+   "duration_total_mean": 17260.94915620906,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.653608999999051,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/C206",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "C2",
+   "n_clients": 100,
+   "on_time_rate": 0.99024,
+   "p_all_on_time": 0.654,
+   "violations_mean": 0.976,
+   "lateness_total_mean": 74.58255853878758,
+   "overtime_mean": 10.657620027870465,
+   "p_overtime": 0.1,
+   "distance": 721.2922327652095,
+   "n_routes": 5,
+   "duration_total_mean": 14878.156123688914,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.883592599999247,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.92184,
+   "p_all_on_time": 0.006,
+   "violations_mean": 7.816,
+   "lateness_total_mean": 30.435311957199406,
+   "overtime_mean": 1.1999658741405732,
+   "p_overtime": 0.236,
+   "distance": 1637.9993408027256,
+   "n_routes": 16,
+   "duration_total_mean": 3184.3627413268277,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.81572099999903,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9993,
+   "p_all_on_time": 0.932,
+   "violations_mean": 0.07,
+   "lateness_total_mean": 0.09629595646121689,
+   "overtime_mean": 0.034647143364318136,
+   "p_overtime": 0.014,
+   "distance": 1919.8088474587234,
+   "n_routes": 21,
+   "duration_total_mean": 3867.7133962283224,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.7554817000000185,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9893600000000001,
+   "p_all_on_time": 0.382,
+   "violations_mean": 1.064,
+   "lateness_total_mean": 2.1762236514443667,
+   "overtime_mean": 0.8408840781517064,
+   "p_overtime": 0.186,
+   "distance": 1752.2317282103436,
+   "n_routes": 19,
+   "duration_total_mean": 3580.931670345118,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.074132700001428,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.86724,
+   "p_all_on_time": 0.002,
+   "violations_mean": 13.276,
+   "lateness_total_mean": 116.60254486056562,
+   "overtime_mean": 12.861233948778874,
+   "p_overtime": 0.598,
+   "distance": 1637.9993408027256,
+   "n_routes": 16,
+   "duration_total_mean": 3213.7460430361343,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.8594411999984004,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.81656,
+   "p_all_on_time": 0.0,
+   "violations_mean": 18.344,
+   "lateness_total_mean": 284.6048136442445,
+   "overtime_mean": 48.63875047905618,
+   "p_overtime": 0.81,
+   "distance": 1637.9993408027256,
+   "n_routes": 16,
+   "duration_total_mean": 3260.6086200087457,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.7936566999997012,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9693200000000001,
+   "p_all_on_time": 0.128,
+   "violations_mean": 3.068,
+   "lateness_total_mean": 21.547200256211042,
+   "overtime_mean": 6.813520700134083,
+   "p_overtime": 0.464,
+   "distance": 1840.3498991069573,
+   "n_routes": 20,
+   "duration_total_mean": 3742.2704686179914,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 4.106331200000568,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.95002,
+   "p_all_on_time": 0.032,
+   "violations_mean": 4.998,
+   "lateness_total_mean": 22.055620860370574,
+   "overtime_mean": 7.517501855695251,
+   "p_overtime": 0.702,
+   "distance": 1549.7424785075514,
+   "n_routes": 16,
+   "duration_total_mean": 3142.0874871359288,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.7846600000011676,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.99626,
+   "p_all_on_time": 0.762,
+   "violations_mean": 0.374,
+   "lateness_total_mean": 2.6476789983481432,
+   "overtime_mean": 1.2074428735904035,
+   "p_overtime": 0.122,
+   "distance": 2288.815527556508,
+   "n_routes": 25,
+   "duration_total_mean": 4655.3673922828875,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 4.634291200000007,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.99994,
+   "p_all_on_time": 0.994,
+   "violations_mean": 0.006,
+   "lateness_total_mean": 0.005149571526871909,
+   "overtime_mean": 0.3439484283227777,
+   "p_overtime": 0.1,
+   "distance": 1908.4051200660035,
+   "n_routes": 20,
+   "duration_total_mean": 3831.540330692336,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.066265100000237,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.99548,
+   "p_all_on_time": 0.704,
+   "violations_mean": 0.452,
+   "lateness_total_mean": 1.102445043031116,
+   "overtime_mean": 0.853133283351919,
+   "p_overtime": 0.176,
+   "distance": 1646.090544136969,
+   "n_routes": 17,
+   "duration_total_mean": 3353.8986615988006,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.171274899999844,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.90852,
+   "p_all_on_time": 0.008,
+   "violations_mean": 9.148,
+   "lateness_total_mean": 86.56340993122221,
+   "overtime_mean": 30.017613076248193,
+   "p_overtime": 0.862,
+   "distance": 1549.7424785075514,
+   "n_routes": 16,
+   "duration_total_mean": 3168.4197578013645,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.8494031000009272,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9738199999999999,
+   "p_all_on_time": 0.304,
+   "violations_mean": 2.618,
+   "lateness_total_mean": 40.22626963265159,
+   "overtime_mean": 17.822409601616872,
+   "p_overtime": 0.52,
+   "distance": 2314.8135432389745,
+   "n_routes": 25,
+   "duration_total_mean": 4700.573580421541,
+   "status": "ok",
+   "beta": 1.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 4.663174100000106,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC101",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9445,
+   "p_all_on_time": 0.0,
+   "violations_mean": 5.55,
+   "lateness_total_mean": 115.20913195925867,
+   "overtime_mean": 32.11525636274876,
+   "p_overtime": 0.742,
+   "distance": 2261.551642443366,
+   "n_routes": 25,
+   "duration_total_mean": 4806.535358346073,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 6.164224100000865,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9980800000000002,
+   "p_all_on_time": 0.868,
+   "violations_mean": 0.192,
+   "lateness_total_mean": 1.4840882532177948,
+   "overtime_mean": 5.0196644549373834,
+   "p_overtime": 0.446,
+   "distance": 2142.4859790986857,
+   "n_routes": 25,
+   "duration_total_mean": 4605.634024995033,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 4.242538500000592,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.8627400000000001,
+   "p_all_on_time": 0.004,
+   "violations_mean": 13.726,
+   "lateness_total_mean": 218.71871432790135,
+   "overtime_mean": 67.4425093383519,
+   "p_overtime": 0.892,
+   "distance": 1549.7424785075514,
+   "n_routes": 16,
+   "duration_total_mean": 3208.812736277062,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6621243999998114,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.97872,
+   "p_all_on_time": 0.268,
+   "violations_mean": 2.128,
+   "lateness_total_mean": 12.44820342981832,
+   "overtime_mean": 8.342755823779566,
+   "p_overtime": 0.556,
+   "distance": 1700.843321171697,
+   "n_routes": 18,
+   "duration_total_mean": 3531.557432406092,
+   "status": "ok",
+   "beta": 0.5,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 4.1244991999992635,
+   "solver_iterations": 750,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9941199999999999,
+   "p_all_on_time": 0.57,
+   "violations_mean": 0.588,
+   "lateness_total_mean": 1.4354350224335608,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1098.818837413777,
+   "n_routes": 8,
+   "duration_total_mean": 5699.001634156607,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.99448140000095,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.99994,
+   "p_all_on_time": 0.994,
+   "violations_mean": 0.006,
+   "lateness_total_mean": 0.0037343874360630026,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1126.9108525144275,
+   "n_routes": 7,
+   "duration_total_mean": 5112.845576210193,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.0753541000012774,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9941199999999999,
+   "p_all_on_time": 0.57,
+   "violations_mean": 0.588,
+   "lateness_total_mean": 1.4354350224335608,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1098.818837413777,
+   "n_routes": 8,
+   "duration_total_mean": 5699.001634156607,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.0720971999999165,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9847800000000001,
+   "p_all_on_time": 0.232,
+   "violations_mean": 1.522,
+   "lateness_total_mean": 10.062591399435659,
+   "overtime_mean": 0.20341039056927934,
+   "p_overtime": 0.02,
+   "distance": 1098.818837413777,
+   "n_routes": 8,
+   "duration_total_mean": 5700.082089233013,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.994744499999797,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.8627400000000001,
+   "p_all_on_time": 0.004,
+   "violations_mean": 13.726,
+   "lateness_total_mean": 218.71871432790135,
+   "overtime_mean": 67.4425093383519,
+   "p_overtime": 0.892,
+   "distance": 1549.7424785075514,
+   "n_routes": 16,
+   "duration_total_mean": 3208.812736277062,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": false,
+   "runtime_s": 4.693013899999642,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9996600000000001,
+   "p_all_on_time": 0.97,
+   "violations_mean": 0.034,
+   "lateness_total_mean": 0.06152981471200803,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1138.64332017966,
+   "n_routes": 8,
+   "duration_total_mean": 5746.258350465006,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.4239003000002413,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9761400000000001,
+   "p_all_on_time": 0.132,
+   "violations_mean": 2.386,
+   "lateness_total_mean": 30.528158527647342,
+   "overtime_mean": 1.656039709334195,
+   "p_overtime": 0.088,
+   "distance": 1098.818837413777,
+   "n_routes": 8,
+   "duration_total_mean": 5701.3937723058825,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.152673499998855,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9847800000000001,
+   "p_all_on_time": 0.232,
+   "violations_mean": 1.522,
+   "lateness_total_mean": 10.062591399435659,
+   "overtime_mean": 0.20341039056927934,
+   "p_overtime": 0.02,
+   "distance": 1098.818837413777,
+   "n_routes": 8,
+   "duration_total_mean": 5700.082089233013,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.5343585000009625,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.99992,
+   "p_all_on_time": 0.992,
+   "violations_mean": 0.008,
+   "lateness_total_mean": 0.043490623600286486,
+   "overtime_mean": 0.21193739659925837,
+   "p_overtime": 0.006,
+   "distance": 1169.5946328222924,
+   "n_routes": 10,
+   "duration_total_mean": 7280.556861853396,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 3.1963653000002523,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9950000000000001,
+   "p_all_on_time": 0.602,
+   "violations_mean": 0.5,
+   "lateness_total_mean": 1.261123396202738,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1065.4598584411376,
+   "n_routes": 5,
+   "duration_total_mean": 3653.7068938754114,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6399375999990298,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC105",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC1",
+   "n_clients": 100,
+   "on_time_rate": 0.9476599999999998,
+   "p_all_on_time": 0.0,
+   "violations_mean": 5.234,
+   "lateness_total_mean": 155.8998076315445,
+   "overtime_mean": 68.33851066950159,
+   "p_overtime": 0.998,
+   "distance": 2212.396782896291,
+   "n_routes": 25,
+   "duration_total_mean": 4690.284806023065,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": false,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 6.751094599998396,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 1.0,
+   "p_all_on_time": 1.0,
+   "violations_mean": 0.0,
+   "lateness_total_mean": 0.0,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1073.5081717322553,
+   "n_routes": 7,
+   "duration_total_mean": 4762.049863059463,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.9392267000002903,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC202",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9761400000000001,
+   "p_all_on_time": 0.132,
+   "violations_mean": 2.386,
+   "lateness_total_mean": 30.528158527647342,
+   "overtime_mean": 1.656039709334195,
+   "p_overtime": 0.088,
+   "distance": 1098.818837413777,
+   "n_routes": 8,
+   "duration_total_mean": 5701.3937723058825,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.3544283999999607,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9865,
+   "p_all_on_time": 0.318,
+   "violations_mean": 1.35,
+   "lateness_total_mean": 9.211986001964855,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1065.4598584411376,
+   "n_routes": 5,
+   "duration_total_mean": 3656.622759465899,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.6685300999997708,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "low",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9942200000000001,
+   "p_all_on_time": 0.498,
+   "violations_mean": 0.578,
+   "lateness_total_mean": 2.5897137561359185,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1068.9357757769842,
+   "n_routes": 5,
+   "duration_total_mean": 3638.0760976837155,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 3.1575615999990987,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9999600000000001,
+   "p_all_on_time": 0.996,
+   "violations_mean": 0.004,
+   "lateness_total_mean": 0.01756347514630943,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1111.0455588557252,
+   "n_routes": 8,
+   "duration_total_mean": 5124.805548698112,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.5750888000002305,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "medium",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9873800000000001,
+   "p_all_on_time": 0.286,
+   "violations_mean": 1.262,
+   "lateness_total_mean": 11.230909005392697,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1068.9357757769842,
+   "n_routes": 5,
+   "duration_total_mean": 3639.8374394219545,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.7094398999997793,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "deterministic",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.9752799999999999,
+   "p_all_on_time": 0.186,
+   "violations_mean": 2.472,
+   "lateness_total_mean": 32.88070703017059,
+   "overtime_mean": 0.0195889419633902,
+   "p_overtime": 0.004,
+   "distance": 1065.4598584411376,
+   "n_routes": 5,
+   "duration_total_mean": 3660.664811003438,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.4232148000010056,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "buffered",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.99932,
+   "p_all_on_time": 0.934,
+   "violations_mean": 0.068,
+   "lateness_total_mean": 0.588574980548111,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1112.4377213022285,
+   "n_routes": 8,
+   "duration_total_mean": 5413.799191219677,
+   "status": "ok",
+   "beta": 1.6448536269514715,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": null,
+   "runtime_s": 2.4075426000017615,
+   "solver_iterations": 5000,
+   "n_candidates": 0
+  },
+  {
+   "instance_id": "solomon/RC206",
+   "method": "reliability",
+   "target": 0.95,
+   "level": "high",
+   "planner_scale": 1.0,
+   "iterations": 5000,
+   "seed": 0,
+   "eval_scenarios": 500,
+   "planning_scenarios": 100,
+   "group": "RC2",
+   "n_clients": 100,
+   "on_time_rate": 0.97672,
+   "p_all_on_time": 0.182,
+   "violations_mean": 2.328,
+   "lateness_total_mean": 34.880830789972684,
+   "overtime_mean": 0.0,
+   "p_overtime": 0.0,
+   "distance": 1068.9357757769842,
+   "n_routes": 5,
+   "duration_total_mean": 3643.4131999864303,
+   "status": "ok",
+   "beta": 0.0,
+   "planned_feasible": true,
+   "unplanned": 0,
+   "target_attained_in_sample": true,
+   "runtime_s": 2.458264599999893,
+   "solver_iterations": 2000,
+   "n_candidates": 5
+  }
+ ],
+ "summary": {
+  "deterministic": {
+   "on_time_rate": 0.9397666666666668,
+   "distance": 1115.4528516560126,
+   "target_attainment_rate": 0.4166666666666667,
+   "n": 12
+  },
+  "buffered": {
+   "on_time_rate": 0.9992133333333335,
+   "distance": 1350.9723508892387,
+   "target_attainment_rate": 1.0,
+   "n": 12,
+   "delta_on_time_pt": 5.94466666666667,
+   "delta_on_time_ci": [
+    3.275583333333335,
+    9.317004166666665
+   ],
+   "delta_distance_pct": 23.781906943547725,
+   "delta_distance_ci": [
+    12.55327028948032,
+    37.169690450359695
+   ],
+   "wilcoxon_p_on_time": 0.00048828125
+  },
+  "reliability": {
+   "on_time_rate": 0.9886750000000002,
+   "distance": 1211.8136368697117,
+   "target_attainment_rate": 1.0,
+   "n": 12,
+   "delta_on_time_pt": 4.890833333333337,
+   "delta_on_time_ci": [
+    2.4656583333333355,
+    7.76627916666667
+   ],
+   "delta_distance_pct": 9.901199267026547,
+   "delta_distance_ci": [
+    3.730615446689906,
+    17.55246927374036
+   ],
+   "wilcoxon_p_on_time": 0.013671875
+  }
+ },
+ "summary_by_target": {
+  "0.95": {
+   "deterministic": {
+    "on_time_rate": 0.9397666666666668,
+    "distance": 1115.4528516560126,
+    "target_attainment_rate": 0.4166666666666667,
+    "n": 12
+   },
+   "buffered": {
+    "on_time_rate": 0.9992133333333335,
+    "distance": 1350.9723508892387,
+    "target_attainment_rate": 1.0,
+    "n": 12,
+    "delta_on_time_pt": 5.94466666666667,
+    "delta_on_time_ci": [
+     3.275583333333335,
+     9.317004166666665
+    ],
+    "delta_distance_pct": 23.781906943547725,
+    "delta_distance_ci": [
+     12.55327028948032,
+     37.169690450359695
+    ],
+    "wilcoxon_p_on_time": 0.00048828125
+   },
+   "reliability": {
+    "on_time_rate": 0.9886750000000002,
+    "distance": 1211.8136368697117,
+    "target_attainment_rate": 1.0,
+    "n": 12,
+    "delta_on_time_pt": 4.890833333333337,
+    "delta_on_time_ci": [
+     2.4656583333333355,
+     7.76627916666667
+    ],
+    "delta_distance_pct": 9.901199267026547,
+    "delta_distance_ci": [
+     3.730615446689906,
+     17.55246927374036
+    ],
+    "wilcoxon_p_on_time": 0.013671875
+   }
+  }
+ }
+}
